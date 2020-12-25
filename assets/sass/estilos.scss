@@ -1,0 +1,7838 @@
+@import "_models/_colors.scss";
+@import "_models/_font.scss";
+@import "_models/_size.scss";
+@import "_models/_mixing.scss";
+
+
+
+//---------------------------------//
+//----------General Styles------------//
+//---------------------------------//
+*{
+    color:$white;
+    font-size: $text;
+    font-family: $gotham-text;
+}
+
+body{
+    background-color: $black;
+}
+
+
+h1{
+    color:$third-golden;
+    font-size: $super-title;
+    font-family: $gotham-principal;
+    margin-top: $medium;
+    margin-bottom: 2px;
+}
+
+.title{
+    font-size: $title;
+    color: $primary-golden;
+    font-family: $gotham-title;
+    margin-top:$super-big;
+    margin-bottom: $big;
+}
+
+
+        .btn-radioselect-container{
+
+                @include flexboxbasic;
+                flex-direction: column;
+                width:80%;
+                @include lineargradientbasic;
+
+                .bnt-radio-container{
+                margin: $small-medium auto;
+                display:flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 90%; 
+                padding-top: $super-big;
+                padding-bottom: $super-big;
+
+                input[type=radio]{
+                    appearance: none;
+                    @include transitionbasicslow;
+                    cursor:pointer;
+                }
+
+                [type=radio] {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: solid 1px $primary-golden;;
+                margin-right: 8px;
+                position: relative;
+                background-color:$black;
+                }
+
+
+                [type=radio]:checked::before
+                {
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $primary-golden;
+                box-shadow: 0 0 2px  $primary-golden,
+                            0 0 7px  $primary-golden,
+                            0 0 12px  $primary-golden,
+                            0 0 17px  $primary-golden,
+                            0 0 22px  $primary-golden ; 
+                position: absolute;
+                top: 30%;
+                left: 30%;
+                }
+
+                label{
+                    font-family: $gotham-subtitle;
+                    font-size: $big-small;
+                    color:$light-golden;
+                    @include transitionbasicslow;
+
+                    &.actived{
+                        color:$primary-golden;
+                    }
+                }
+            }
+        }
+
+::-webkit-scrollbar{
+    background-color: $black;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: $primary-golden;
+    border-radius: 5px;
+    border-right: 2px solid $black;
+    cursor:pointer;
+}
+
+
+
+//---------------------------------//
+//---------------------------------//
+
+//------------Menu Movil--------------//
+.box-menu-movil{
+    display:none;
+}
+
+
+//------------Menu Fixed--------------//
+.menu-fixed{
+    position: fixed;
+    top:-200px;
+    left:0;
+    z-index:999;
+    opacity:0;
+
+    @include transitionbasic;
+
+    .logo-fixed{
+        @include flexboxbasic;
+        height: $super-big;
+        @include lineargradienmenu;
+        i{
+            color:$black;
+            font-size:$small;
+            cursor: pointer;
+            @include transitionbasic;
+
+            &:hover{
+                color: $white;
+                }
+
+        }
+
+    }
+
+    .menu-movil-fixed{
+        opacity: 0;
+        @include flexboxbasic;
+        height: $super-big;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: 100%;
+        @include lineargradienservicesmenu;
+        displaY:none;
+        @include transitionbasic;
+
+        ul{
+            @include flexboxbasic;
+            align-content: space-between;
+            height: $super-big;
+            width: 100%;
+            flex-wrap: wrap;
+            
+            li{
+                height: 100%;
+                @include flexboxbasic;
+                margin: auto 2%;
+                a {
+                    color:$light-golden;
+                    font-family: $gotham-title;
+                    font-size: $text;
+                    @include transitionbasic;
+
+                    &:hover{
+                        color: $third-golden;
+                        text-shadow: -2px 0px 8px rgba($darnnes, 1);
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+//---------------------------------//
+
+
+
+
+//------------Boton up--------------//
+.btn-up{
+    @include flexboxbasic;
+    width: 60px;
+    position: fixed;
+    right: 10px;
+    bottom:10px;
+    z-index: 99;
+    border-radius: 30px;
+    right: -80px;
+    @include transitionbasicslow;
+    
+    .container-btn-up{
+        @include flexboxbasic;
+        width:40px;
+        height:40px;
+        background-color: $dark-golden;
+        border-radius: 20px;
+
+        i{
+        color:$light-golden;
+        font-size: $small-big;
+        @include transitionbasic;
+        border-radius: 20px;
+        cursor:pointer;
+
+            &:hover{
+                @include shadowsshine;
+            }
+
+        }
+    }
+}
+
+
+
+//---------------------------------//
+
+
+//----------------------------------------------//
+//--------------about me light box-------------//
+//--------------------------------------------//
+
+
+
+
+
+
+
+//---------------------------------//
+//--------------banner-------------//
+//---------------------------------//
+.banner{
+    height: 100vh;
+        i{
+            color:$primary-golden;
+            font-size: $title;
+        }
+
+//------------Menu PC--------------//
+    .menu-header-pc{
+
+        @include flexboxbasic;
+        height: $super-big;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: 100%;
+
+        ul{
+            @include flexboxbasic;
+            align-content: space-between;
+            height: $super-big;
+            width: 100%;
+            flex-wrap: wrap;
+            
+            li{
+                height: 100%;
+                @include flexboxbasic;
+                margin: auto 2%;
+                a {
+                    color: $white;
+                    font-family: $gotham-title;
+                    font-size: $text;
+                    @include transitionbasic;
+
+                    &:hover{
+                        color: $third-golden;
+                    }
+                    
+                }
+            }
+        }
+
+
+    }
+//---------------------------------//
+
+
+
+
+
+
+//---------Personal Logo-----------//
+    .personal-logo{
+        @include flexboxbasic;
+        height: $super-big;
+    }
+//---------------------------------//
+
+
+
+
+
+//---------Personal Photo-----------//
+    .personal-photo {
+        @include flexboxbasic;
+    }
+
+//---------------------------------//
+
+
+
+
+
+//-------Personal Banner-----------//
+    .pesonal-banner{
+        text-align: center;
+
+        h2{
+            color:$dark-golden;
+            font-family: $gotham-title;
+            font-size: $medium-title;
+            margin-top: 2px;
+            margin-bottom:$medium;
+        }
+
+        h3{
+            color:$light-plate-2;
+            font-family: $gotham-secundary;
+            font-size: $subtitle;
+            margin: $small auto;
+        }
+
+
+        h4{
+            color:$light-plate-2;
+            font-family: $gotham-text;
+            font-size: $medium-subtitle;
+            margin-top: 2px;
+            margin-bottom:$medium;
+        }
+    }
+
+
+    .social-media{
+        @include flexboxbasic;
+
+            a{
+                @include flexboxbasic;
+                margin: auto 2%;
+                i {
+                    color: $third-golden;
+                    margin: auto 2%;
+                    font-size: $small-medium;
+                    @include transitionbasic;
+                    cursor: pointer;
+                    &:hover {
+                        color: $primary-golden;
+                    }
+                }
+            }
+    }
+
+
+
+}
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+
+
+
+
+//---------------------------------//
+//-------------About me------------//
+//---------------------------------//
+.aboutme{
+    margin-top:$super-big;
+
+
+        
+
+    .aboutme-test-slider{
+        @include flexboxbasic;
+        flex-direction:column;
+
+        .aboutme-text{
+        padding-left:$medium;
+        width: 100%;
+
+            h3{
+                color:$light-plate-1;
+                font-size: $subtitle;
+                margin-bottom: $small;
+                text-align: center;
+            }
+
+            p{
+                color:$light-plate-2;
+                font-size:$text-big;
+                margin:$small;
+            }
+
+            &.hide{
+            display: none;
+            opacity: 0;
+            }           
+        }
+
+        &.hide{
+            display: none;
+            opacity: 0;
+        }       
+    }
+
+    .aboutme-photo-slider{
+        @include flexboxbasic;
+        @include shadowbox;
+        width: 90%;
+        .aboutme-photo-slide{
+            padding:5%;
+            @include flexboxbasic;
+            margin: auto;
+            width: 90%;
+            @include lineargradientbasic;
+            img{
+                width:90%;
+                margin:auto;
+                cursor: pointer;
+                @include transitionbasicslow;
+                
+                &:hover{
+                    opacity:0.5;
+                }
+            }
+
+            &.hide{
+            display: none;
+            opacity: 0;
+            }
+        }
+    }
+}
+
+
+//----------------------------------------------//
+//--------------about me light box-------------//
+//--------------------------------------------//
+.about-me-light-box{
+    @include flexboxbasic;
+    position: fixed;
+    z-index: 999;
+    top:0;
+    left:0;
+    background-color: rgba( $darnnes, 0.9 ) ;
+    height:100vh;
+    display: none;
+
+
+        ul{
+            @include flexboxbasic;
+            align-content: space-between;
+            height: $super-big;
+            width: 100%;
+            flex-wrap: wrap;
+            margin-bottom:$big-small;
+            
+            li{
+                height: 100%;
+                @include flexboxbasic;
+                margin: auto 2%;
+                a {
+                    color: $white;
+                    font-family: $gotham-title;
+                    font-size: $small-big;
+                    @include transitionbasic;
+                    border-bottom: solid 2px rgba( $darnnes, 0.9 ) ;
+
+                    &:hover{
+                        color: $third-golden;
+                    }
+
+                    &.active{
+                        color: $third-golden;
+                        border-bottom: solid 2px $third-golden;                       
+                    }
+                    
+                }
+            }
+        }
+
+    .btn-light-box{
+        display:flex;
+        width:100%;
+        justify-content:flex-end;
+        align-items:center;
+
+        i{
+            color:$secundary-golden;
+            font-size:$big;
+            margin:$big-small;
+            cursor: pointer;
+            @include transitionbasic;
+
+            &:hover{
+                color:$primary-golden;
+            }
+        }
+
+    }
+
+    .container-aboutme-lightbox{
+        @include flexboxbasic;
+        width:100%;
+        @include transitionbasicslow;
+        display:none;
+        opacity:0;
+        height:800px;
+
+        &.active{
+            display:flex;
+            opacity:1;
+
+        }
+
+        .photo-aboutme-lightbox{
+            display:flex;
+            align-items:start;
+            justify-content:center;
+            width:50%;
+            height:90%;
+            
+                img{
+                    width: 80% ;
+                    margin:auto 5% ; 
+                }
+            }
+
+        .text-aboutme-lightbox{
+            display:flex;
+            align-items:start;
+            width:50%;
+            flex-direction:column;
+            text-align: left;
+            height:90%;
+
+                h3{
+                color:$light-golden;
+                font-family:$gotham-title;
+                font-size:$medium;  
+                margin: $small auto;               
+                }
+
+                p{            
+                color:$light-golden;
+                font-family:$gotham-text;
+                font-size:$big-small;
+                margin: $small auto; 
+                }
+
+
+        }
+
+    }
+}
+
+
+
+
+
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//------------Experience-----------//
+//---------------------------------//
+.experience{
+    margin-top:$super-big;
+
+
+    .expecience-container-text{
+        @include flexboxbasic;
+    }
+
+        .box-btn-container-experience{
+            displaY:none;
+    }
+
+
+
+    .expecience-container-photos{
+        @include flexboxbasic;
+
+        .experience-type{
+            @include flexboxcolumn;
+            width:90%;
+            position: relative;
+            @include shadowbox;
+            margin: $small auto;
+
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .experence-photo{
+                @include flexboxcolumn;
+                width:100%;
+                @include lineargradientbasic;
+                @include transitionbasicslow;
+                cursor: pointer;
+
+                &.opacity-container{
+                    opacity: 0.3;
+                }
+
+                h3{
+                    font-family: $gotham-subtitle;
+                    font-size: $subtitle;
+                    margin: $small auto;
+                    color:$light-plate-1;
+                }
+
+                img{
+                    margin: $small auto;
+                    width:80%; 
+                }
+
+                p{
+                    font-size: $small;
+                    font-family: $gotham-text;
+                    margin: $small $small;
+                }
+            }
+
+            .expierence-text{
+                position: absolute;
+                top:0;
+                left:0;
+                height: 100%;
+                @include flexboxcolumn;
+                opacity: 0;
+                @include transitionbasicslow;
+                text-align: center;
+
+                h3{
+                    font-family: $gotham-subtitle;
+                    font-size: $subtitle;
+                    margin: $small auto;
+                    color:$light-plate-1;
+                }
+
+                p{
+                    font-size: $small;
+                    font-family: $gotham-text;
+                    margin: $small $small;
+                }
+
+                &:hover{
+                    opacity: 1;
+                }
+
+
+            }
+
+
+
+
+        }
+
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//------------Services-------------//
+//---------------------------------//
+
+.services{
+    margin-top:$super-big;
+    @include flexboxbasic;
+
+    .services-box{
+        @include flexboxcolumn;
+        border-radius: 5px;
+        width: 90%;
+        text-align: center;
+        @include lineargradienservices;
+        margin: $small-big auto;
+
+        h3{
+            color:$third-golden;
+            font-size: $subtitle;
+            font-family: $gotham-subtitle;
+            margin: $small auto ;
+        }
+
+
+
+
+        .box-list-services{
+            @include flexboxcolumn;
+            width:100%;
+
+            ul{
+                @include flexboxcolumn;
+                width:90%;
+                text-align: center; 
+                margin:0;
+            }
+
+            li{
+            color:$light-golden;
+            font-size: $text;
+            font-family: $gotham-text;
+            margin: $small auto ;
+            text-align: left;
+        }
+        }
+
+    }
+
+    
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//--------------Skill--------------//
+//---------------------------------//
+.skill{
+    margin-top: $super-big; 
+    margin-bottom: $super-big;
+    
+
+    h2{
+        margin-top: $super-big; 
+        
+    }
+
+    .box-btn-skill{
+        display:none;
+    }
+
+    .box-up-skill{
+        display:none;
+    }
+
+    .skill-text{
+        @include flexboxbasic;
+        .bnt-radio-container{
+                margin: 2px auto;
+                padding-top: $small;
+                padding-bottom: $small;
+            }
+
+    }
+
+    .skill-photo-container{
+        @include flexboxbasic;
+        margin-top: $super-big;
+        text-align: center;
+
+        .boxskill{
+            @include shadowbox;
+            @include lineargradientbasic;
+            margin: $small auto;
+            @include flexboxbasic;
+            flex-wrap: wrap;
+            width:90%;
+            min-height:630px;
+        }
+
+
+//---------------------------------//
+//-----------Front End-------------//
+        .frontend{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:30%;
+                padding:1%;
+                max-height:200px;
+
+
+                .h3-skill-container{
+                    @include flexboxbasic;
+                    width:100%;
+                }
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:180px;
+                    width:100%;
+                }
+
+                .bar-skill-html{
+                    height: $small;
+                    @include skillbar($color:#E44E26);
+
+                    .html-bar{
+                        @include skillbarcontent($color:#E44E26, $porcent:80%);
+                    }
+                }
+
+                .bar-skill-css{
+                    height: $small;
+                    @include skillbar($color:#1095C8);
+
+                    .css-bar{
+                        @include skillbarcontent($color:#1095C8, $porcent:70%);
+                    }
+                }
+
+                .bar-skill-js{
+                    height: $small;
+                    @include skillbar($color:#D4CA37);
+
+                    .js-bar{
+                        @include skillbarcontent($color:#D4CA37, $porcent:75%);
+                    }
+                }
+
+                .bar-skill-responsive{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$light-golden);
+
+                    .responsive-bar{
+                        @include skillbarcontent($color:$light-golden, $porcent:90%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-ui{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .ui-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                    .bar-skill-ux{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$red);
+
+                    .ux-bar{
+                        @include skillbarcontent($color:$red, $porcent:40%);
+                        
+                    }
+                    
+                }
+            
+                img{
+                    width:90%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small-big);
+                }
+
+            }
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//-------------backend-------------//
+        .backend{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:30%;
+                padding:1%;
+                max-height:200px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:180px;
+                    width:100%;
+                }
+
+                .bar-skill-php{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .php-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-firebase{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .firebase-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-sql{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .sql-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-nodejs{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .nodejs-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-sqlserver{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .sqlserver-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                img{
+                    width:90%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small-big);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+        
+
+
+//---------------------------------//
+//----------technologies-----------//
+        .technologies{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:30%;
+                padding:1%;
+                max-height:200px;
+
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:160px;
+                    width:100%;
+                }
+
+
+                .bar-skill-react{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .react-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-angular{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .angular-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-github{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .github-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-git{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .git-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-typescript{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .typescript-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+            
+                .bar-skill-jquery{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .jquery-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                img{
+                    width:90%;
+                    margin-top: $big-small;
+                    max-height:170px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small-big);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//--------css-preprocessors--------//
+        .css-preprocessors{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+            
+                .bar-skill-less{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .less-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+            
+                .bar-skill-sass{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .sass-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                img{
+                    width:80%;
+                    margin-top: $big-small;
+                    max-height:190px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small-big);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//---------------data--------------//
+        .data{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:30%;
+                padding:1%;
+                max-height:250px;
+
+
+                .h3-skill-container{
+                    @include flexboxbasic;
+                        width:100%;
+                        margin-bottom:20px;
+
+                }
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:160px;
+                    width:100%;
+                }
+
+
+                .bar-skill-intelligence{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .intelligence-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+            
+                .bar-skill-cloud{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .cloud-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-bigdata{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+
+
+                    .bigdata-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+            
+                .bar-skill-iot{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .iot-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-kpis{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .kpis-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                img{
+                    width:90%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small-big);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//----------music-producer---------//
+        .music-producer{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:49%;
+                padding:1%;
+                max-height:310px;
+
+                .bar-skill-cakewalk{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .cakewalk-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-cubase{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .cubase-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                img{
+                    width:75%;
+                    margin-top: $big-small;
+                    max-height:160px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small-big);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//----------Adobe---------//
+        .otros{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:30%;
+                padding:1%;
+                max-height:200px;
+
+                .h3-skill-container{
+                    @include flexboxbasic;
+                        width:100%;
+                        margin-bottom:20px;
+
+                }
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:160px;
+                    width:100%;
+                }
+
+                .bar-skill-illustrator{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .illustrator-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-audition{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .audition-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-photoshop{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .photoshop-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-premier{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+                    .premier-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+                .bar-skill-xd{
+                    height: $small;
+                    margin-bottom: $medium;
+                    @include skillbar($color:$secondary-blue);
+
+
+
+                    .xd-bar{
+                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        
+                    }
+                    
+                }
+
+
+                img{
+                    width:90%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small-big);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+    }
+
+}
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//-----------Portafolio------------//
+//---------------------------------//
+.portfolio{
+    margin-top: $super-big;
+
+    .box-img-portafolio{
+        
+        @include flexboxbasic;
+
+        a{
+        position: relative;
+        @include flexboxbasic;
+        width:90%; 
+        margin: $big-small auto;
+        padding:1%;
+            @include transitionbasicslow;
+
+                &:hover{
+                    @include shadowboximg; 
+                    @include lineargradientbasic;
+                }
+
+
+            img{
+            width:90%;
+            margin: $big-small auto;
+
+            }
+        }
+    }
+}
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//-------------Contact-------------//
+//---------------------------------//
+.contact{
+    @include flexboxbasic;
+    margin: $super-big auto;
+
+    .contact-container{
+        @include flexboxbasic;
+            width: 80%;
+            background-image: url('/assets/img/ejecutivo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+
+
+            .contact-container-form{
+            @include flexboxcolumn;
+            width: 100%;
+            background-color: rgba( $darnnes, 0.8);
+            border-radius: 5px;
+
+                form{
+                    @include flexboxcolumn;
+                    width: 100%;
+                    text-align: center;
+
+                    .msg-container{
+                        h3{
+                        margin:$notes auto;
+                        }
+                    }
+
+                    .option-container{
+                        @include flexboxcolumn;
+                        width: 100% ;
+                        margin: $small auto;
+                        
+                        h3{
+                        margin-top: $small;
+                        }
+
+                        .option-type{
+                            div{
+                                margin:$notes auto;
+                            }
+                        }
+                        
+                    }
+
+                    input{
+                        width:50%;
+                    }
+
+                    label, select, textarea, h3{
+                        font-family: $gotham-form;
+                        color:$light-golden;
+                        font-size: $text-big;
+                        margin:auto;
+                    }
+
+                    input, select, textarea{
+                        border:none;
+                        background-color: transparent;
+                        font-family: $gotham-form;
+                        font-size: $text-big;
+                        color:$light-golden;
+                        border-bottom: 1px $dark-golden solid;
+                    }
+
+
+                    .type-service{
+                        &.hide{
+                            display:none;
+                        }
+                    }
+
+                    textarea{
+                        border: 1px $dark-golden solid;
+                        height:200px;
+                        width:100%;
+                        margin: $small auto;
+                        border-radius: 5px;
+                    }
+
+                    option{
+                        border:none;
+                        background-color: rgba( $darnnes, 0.8);
+                        font-family: $gotham-form;
+                        font-size: $text-big;
+                        color:$light-golden;
+                        border-radius: 5px;
+                    }
+
+                    input[type=radio]{
+                    appearance: none;
+                    @include transitionbasicslow;
+                    cursor:pointer;
+                    }
+
+
+                    [type=radio] {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        border: solid 2px $primary-golden;;
+                        margin-right: 8px;
+                        position: relative;
+                        background-color:transparent;
+                        }
+
+
+                    [type=radio]:checked::before{
+
+                        content: "";
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: $primary-golden;
+                        box-shadow: 0 0 2px  $primary-golden,
+                                    0 0 7px  $primary-golden,
+                                    0 0 12px  $primary-golden,
+                                    0 0 17px  $primary-golden,
+                                    0 0 22px  $primary-golden ; 
+                        position: absolute;
+                        top: 30%;
+                        left: 30%;
+                    }
+
+                    .btn-submit{
+                        padding:5px;
+                        margin:10px;
+                        width:120px;
+                        border: 2px solid $dark-golden;
+                        border-radius:5px;
+                        @include transitionbasic;
+
+                        input{
+                            border-bottom: none;
+                        }
+
+                        &:hover{
+                            border: 2px solid $dark-golden;
+                            background-color:$dark-golden;
+                        
+                            
+                        }
+                    }
+
+
+                }
+
+            }
+
+    }
+
+}
+
+
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//--------------Footer-------------//
+//---------------------------------//
+.footer{
+    @include flexboxcolumn;
+    @include lineargradienservices;
+
+    p{
+        font-size: $text-big;
+        margin:$big-small auto;
+        color:$light-golden;
+    }
+
+    a{
+        margin: $small 2%;  
+    }
+
+    i{
+        color: $third-golden;
+        margin: $small 2%;
+        font-size: $text-big;
+        @include transitionbasic;
+        cursor: pointer;
+        &:hover {
+            color: $primary-golden;
+        }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+@media(max-width:320px)
+{
+
+
+
+//---------------------------------//
+//----------General Styles------------//
+//---------------------------------//
+h1{
+    font-size: $title;
+    margin-top: $medium;
+    margin-bottom: 2px;
+}
+
+.title{
+    font-size: $medium-subtitle;
+    margin-top:$medium;
+    margin-bottom: $medium;
+}
+//---------------------------------//
+//---------------------------------//
+
+
+//------------Menu Movil--------------//
+.box-menu-movil{
+    @include flexboxbasic;
+    position: fixed;
+    top:-60px;
+    right:0;
+    z-index:99;
+    @include transitionbasicslow;
+
+    .box-logo-menuicon{
+        @include flexboxbasic;
+        @include lineargradienservicesmenu;
+        width:100%;
+
+        .box-icon{
+            display: flex;
+            justify-content: flex-end;
+            text-align: right;
+
+            i{
+                font-size: $title;
+                color:$primary-golden;
+                margin-top:6px;
+                margin-right: $notes;
+                cursor: pointer;
+                @include transitionbasic;
+
+                &:hover{
+                    color:$dark-golden;
+                }
+            }
+        }
+
+        .box-logo{
+            i{
+                font-size: $subtitle;
+                color:$primary-golden;
+            }
+        }
+    }
+
+    .box-menu-list{
+        position: fixed;
+        top:36px;
+        right:-150px;
+        z-index:99;
+        @include transitionbasic;
+
+        @include flexboxbasic;
+        width:100%;
+        justify-content: flex-end;
+
+        .menu-movil{
+            @include flexboxbasic;
+            width:40%;
+            @include lineargradienmenu;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            ul{
+                li{
+                    margin: 6px auto;
+                    a{
+                    color:$primary-plate;
+                    font-family: $gotham-title;
+                    font-size: $text;
+                    @include transitionbasic;
+
+                        &:hover{
+                            color: $light-golden;
+                        }
+
+                        &.active{
+                            color:$white;
+                        }
+                    }
+                }
+            }
+        }
+
+    } 
+
+
+}
+
+
+//------------Menu Fixed--------------//
+.menu-fixed{
+    displaY:none;
+    top:-200px;
+}
+//---------------------------------//
+
+
+
+
+//------------Boton up--------------//
+.btn-up{
+    display:none;
+    right: -80px;
+}
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//--------------banner-------------//
+//---------------------------------//
+.banner{
+    height: 100vh;
+        i{
+            font-size: $text;
+        }
+
+//------------Menu PC--------------//
+    .menu-header-pc{
+        display:none;
+    }
+//---------------------------------//
+
+
+
+
+
+
+//---------Personal Logo-----------//
+    .personal-logo{
+        height: $medium;
+    }
+//---------------------------------//
+
+
+
+
+
+//---------Personal Photo-----------//
+    .personal-photo {
+        @include flexboxbasic;
+    }
+
+//---------------------------------//
+
+
+
+
+
+//-------Personal Banner-----------//
+    .pesonal-banner{
+        text-align: center;
+
+        h2{
+            font-size: $subtitle;
+            margin-top: 2px;
+            margin-bottom:$medium;
+        }
+
+        h3{
+            font-size: $medium-subtitle;
+            margin: $small auto;
+        }
+
+
+        h4{
+            font-size: $text;
+            margin-top: 2px;
+            margin-bottom:$medium;
+        }
+    }
+
+
+    .social-media{
+            a{
+                margin: auto 2%;
+                i {
+                    margin: auto 2%;
+                    font-size: $text-big;
+                }
+            }
+    }
+
+
+
+}
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+
+
+
+
+//---------------------------------//
+//-------------About me------------//
+//---------------------------------//
+.aboutme{
+    margin-top:$medium;
+
+    .aboutme-test-slider{
+
+        .aboutme-text{
+        padding-left:0;
+        text-align: center;
+
+            h3{
+                color:$light-plate-1;
+                font-size: $text;
+                margin-bottom: $small;
+                text-align: center;
+            }
+
+            p{
+                font-size:$normal;
+                margin:$small;
+            }
+
+            &.hide{
+            display: none;
+            opacity: 0;
+            }           
+        }       
+    }
+
+    .aboutme-photo-slider{
+        @include flexboxbasic;
+        @include shadowbox;
+        width: 90%;
+        .aboutme-photo-slide{
+            padding:5%;
+            @include flexboxbasic;
+            margin: auto;
+            width: 90%;
+            @include lineargradientbasic;
+            img{
+                width:90%;
+                margin:auto;
+                cursor: pointer;
+                @include transitionbasicslow;
+                
+                &:hover{
+                    opacity:0.5;
+                }
+            }
+
+            &.hide{
+            display: none;
+            opacity: 0;
+            }
+        }
+    }
+}
+//---------------------------------//
+//---------------------------------//
+
+
+//----------------------------------------------//
+//--------------about me light box-------------//
+//--------------------------------------------//
+.about-me-light-box{
+
+    height:100vh;
+    display: none;
+
+
+        ul{
+
+            height: $small-medium;
+            width: 100%;
+            margin-bottom:$notes;
+            
+            li{
+                height: 100%;
+                margin: auto 2%;
+                a {
+                    font-size: $big-small;
+
+                    &:hover{
+                        color: $third-golden;
+                    }
+
+                    &.active{
+                        color: $third-golden;
+                        border-bottom: solid 2px $third-golden;                       
+                    }
+                    
+                }
+            }
+        }
+
+    .btn-light-box{
+        display:flex;
+        width:100%;
+        justify-content:flex-end;
+        align-items:center;
+
+        i{
+            font-size:$small-medium;
+            margin:$notes;
+            &:hover{
+                color:$primary-golden;
+            }
+        }
+
+    }
+
+    .container-aboutme-lightbox{
+        @include flexboxcolumn ;
+        width:100%;
+        display:none;
+        opacity:0;
+        height:400px;
+
+        &.active{
+            display:flex;
+            opacity:1;
+
+        }
+
+        .photo-aboutme-lightbox{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            width:100%;
+            height:180px;
+            margin-top:$notes;
+            
+                img{
+                    width: 80% ;
+                    margin:1px auto ; 
+                    display:block;
+                    max-height:150px;
+                }
+            }
+
+        .text-aboutme-lightbox{
+            display:flex;
+            align-items:center;
+            width:100%;
+            flex-direction:column;
+            text-align: center;
+            height:200px;
+
+                h3{
+                font-size:$small;  
+                margin: 6px auto;               
+                }
+
+                p{            
+                font-size:12px;
+                margin: 6px auto; 
+                }
+
+
+        }
+
+    }
+}
+
+
+
+
+
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+
+
+
+//---------------------------------//
+//------------Experience-----------//
+//---------------------------------//
+.experience{
+    margin-top:$medium;
+
+    .expecience-container-text{
+        display:none;
+
+    }
+
+    .box-btn-container-experience{
+        @include flexboxcolumn;
+        @include buttonbasic;
+    }
+
+    .expecience-container-photos{
+
+        .experience-type{
+            .experence-photo{
+
+                h3{
+                    font-size: $text-big;
+                    margin: $small auto;
+                }
+
+                img{
+                    margin: $small auto;
+                    width:80%; 
+                }
+
+                p{
+                    font-size: $normal;
+                    margin: $small $small;
+                }
+            }
+
+            .expierence-text{
+
+                h3{
+                    font-size: $text-big;
+                    margin: $small auto;
+                }
+
+                p{
+                    font-size: $normal;
+                    margin: $small $small;
+                }
+            }
+        }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//------------Services-------------//
+//---------------------------------//
+
+.services{
+    margin-top:$medium;
+
+    .services-box{
+        text-align: center;
+        margin: $small-big auto;
+
+        h3{
+            font-size: $text-big;
+            margin: $small auto ;
+        }
+
+        .box-list-services{
+            text-align: center;
+
+            li{
+            font-size: $normal;
+            margin: $small auto ;
+        }
+        }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//--------------Skill--------------//
+//---------------------------------//
+.skill{
+    margin-top: $medium; 
+    margin-bottom: $medium;
+
+    .box-btn-skill{
+        @include flexboxcolumn;
+        @include buttonbasic;
+    }
+
+    h2{
+        margin-top: $medium; 
+    }
+
+    .box-up-skill{
+        @include flexboxbasic;
+        
+        .up-skill{
+            @include lineargradienmenu;
+            @include flexboxbasic;
+            width: 100%;
+            cursor: pointer;
+            padding:1%;
+            border-radius: 5px;
+            @include transitionbasicslow;
+
+            &:hover{
+                @include lineargradienservices;
+
+                h3{
+                    color:$third-golden;
+                }
+
+                i{
+                    color:$third-golden;         
+                }
+
+            }
+
+            h3{
+                font-size: $text;
+                color:$darnnes;
+                font-family: $gotham-title; 
+                margin:auto 6px;
+                @include transitionbasicslow;
+            }
+
+            i{
+                font-size: $text;
+                color:$darnnes;
+                @include transitionbasicslow;         
+            }
+        }
+
+
+
+    }
+
+    .skill-text{
+        display:none;      
+    }
+
+    .skill-photo-container{
+        @include flexboxbasic;
+        margin-top: $super-big;
+        text-align: center;
+
+        .boxskill{
+            @include shadowbox;
+            @include lineargradientbasic;
+            margin: $small auto;
+            @include flexboxbasic;
+            flex-wrap: wrap;
+            width:90%;
+            min-height:400px;
+        }
+
+
+//---------------------------------//
+//-----------Front End-------------//
+        .frontend{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:250px;
+
+                .bar-skill-html{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-css{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-js{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-responsive{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-ui{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                    .bar-skill-ux{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+            
+                img{
+                    width:50%;
+                    margin-top: $small;
+                    max-height:200px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+
+            }
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//-------------backend-------------//
+        .backend{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:80px;
+                    width:100%;
+                }
+
+
+
+                .bar-skill-php{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-firebase{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-sql{
+                    height: $notes;
+                    margin-bottom: $medium;
+  
+                    
+                }
+
+                .bar-skill-nodejs{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-sqlserver{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $medium;
+                    max-height:200px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+        
+
+
+//---------------------------------//
+//----------technologies-----------//
+        .technologies{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:80px;
+                    width:100%;
+                }
+
+                .bar-skill-react{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-angular{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-github{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-git{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-typescript{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+            
+                .bar-skill-jquery{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:200px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//--------css-preprocessors--------//
+        .css-preprocessors{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+            
+                .bar-skill-less{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-sass{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:190px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//---------------data--------------//
+        .data{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:250px;
+
+                .h3-skill-container{
+                    margin-bottom:0;
+                }
+
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:80px;
+                    width:100%;
+                }
+
+                .bar-skill-intelligence{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-cloud{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-bigdata{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-iot{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-kpis{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//----------music-producer---------//
+        .music-producer{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+                .bar-skill-cakewalk{
+                    height: $notes;
+                    margin-bottom: $medium;  
+                }
+
+                .bar-skill-cubase{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:160px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//----------Adobe---------//
+        .otros{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:80px;
+                    width:100%;
+                }
+
+                .bar-skill-illustrator{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-audition{
+                    height: $notes;
+                    margin-bottom: $medium;               
+                }
+
+                .bar-skill-photoshop{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-premier{
+                    height: $notes;
+                    margin-bottom: $medium; 
+                }
+
+                .bar-skill-xd{
+                    height: $notes;
+                    margin-bottom: $medium;                  
+                }
+
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+    }
+
+}
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//-----------Portafolio------------//
+//---------------------------------//
+.portfolio{
+    margin-top: $medium;
+
+    .box-img-portafolio{
+        
+        a{
+        width:90%; 
+        margin: $big-small auto;
+        padding:1%;
+            img{
+            width:90%;
+            margin: $big-small auto;
+
+            }
+        }
+    }
+}
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//-------------Contact-------------//
+//---------------------------------//
+.contact{
+    margin: $medium auto;
+    .contact-container{
+            width: 90%;
+            background-image: url('/assets/img/ejecutivo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+
+
+            .contact-container-form{
+            width: 100%;
+            background-color: rgba( $darnnes, 0.8);
+            border-radius: 5px;
+
+                form{
+                    width: 100%;
+                    text-align: center;
+
+                    .msg-container{
+                        h3{
+                        margin:$notes auto;
+                        }
+                    }
+
+                    .option-container{
+                        width: 80% ;
+                        margin: $notes auto;
+                        
+                        h3{
+                        margin-top: $notes;
+                        }
+
+                        .option-type{
+                            div{
+                                margin:$notes auto;
+                            }
+                        }
+                        
+                    }
+
+                    input{
+                        width:90%;
+                    }
+
+                    label, select, textarea, h3{
+                        font-size: $normal;
+                        margin:auto;
+                    }
+
+                    input, select, textarea{
+                        border:none;
+                        background-color: transparent;
+                        font-size: $normal;
+                        border-bottom: 1px $dark-golden solid;
+                    }
+
+                    textarea{
+                        border: 1px $dark-golden solid;
+                        height:100px;
+                        width:90%;
+                        margin: $small auto;
+                        border-radius: 5px;
+                    }
+
+                    option{
+                        border:none;
+                        font-size: $normal;
+                        border-radius: 5px;
+                    }
+
+                    input[type=radio]{
+                    appearance: none;
+                    @include transitionbasicslow;
+                    cursor:pointer;
+                    }
+
+
+                    [type=radio] {
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 8px;
+                        }
+
+
+                    [type=radio]:checked::before{
+
+                        content: "";
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: $primary-golden;
+                        box-shadow: 0 0 2px  $primary-golden,
+                                    0 0 7px  $primary-golden,
+                                    0 0 12px  $primary-golden,
+                                    0 0 17px  $primary-golden,
+                                    0 0 22px  $primary-golden ; 
+                        position: absolute;
+                        top: 30%;
+                        left: 30%;
+                    }
+                }
+            }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//--------------Footer-------------//
+//---------------------------------//
+.footer{
+    p{
+        font-size: $normal;
+        margin:$big-small auto;
+    }
+
+    i{
+        margin: $small 2%;
+        font-size: $small;
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+}
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+@media(orientation: landscape){
+
+
+
+}
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+@media(min-width:321px) and (max-width:468px)
+{
+//---------------------------------//
+//----------General Styles------------//
+//---------------------------------//
+h1{
+    font-size: $title;
+    margin-top: $medium;
+    margin-bottom: 2px;
+}
+
+.title{
+    font-size: $medium-subtitle-B;
+    margin-top:$medium;
+    margin-bottom: $medium;
+}
+//---------------------------------//
+//---------------------------------//
+
+
+//------------Menu Movil--------------//
+.box-menu-movil{
+    @include flexboxbasic;
+    position: fixed;
+    top:-60px;
+    right:0;
+    z-index:99;
+    @include transitionbasicslow;
+
+    .box-logo-menuicon{
+        @include flexboxbasic;
+        @include lineargradienservicesmenu;
+        width:100%;
+
+        .box-icon{
+            display: flex;
+            justify-content: flex-end;
+            text-align: right;
+
+            i{
+                font-size: $title;
+                color:$primary-golden;
+                margin-top:6px;
+                margin-right: $notes;
+                cursor: pointer;
+                @include transitionbasic;
+
+                &:hover{
+                    color:$dark-golden;
+                }
+            }
+        }
+
+        .box-logo{
+            i{
+                font-size: $subtitle;
+                color:$primary-golden;
+            }
+        }
+    }
+
+    .box-menu-list{
+        position: fixed;
+        top:36px;
+        right:-180px;
+        z-index:99;
+        @include transitionbasic;
+
+        @include flexboxbasic;
+        width:100%;
+        justify-content: flex-end;
+
+        .menu-movil{
+            @include flexboxbasic;
+            width:40%;
+            @include lineargradienmenu;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            ul{
+                li{
+                    margin: 6px auto;
+                    a{
+                    color:$primary-plate;
+                    font-family: $gotham-title;
+                    font-size: $text;
+                    @include transitionbasic;
+
+                        &:hover{
+                            color: $light-golden;
+                        }
+
+                        &.active{
+                            color:$white;
+                        }
+                    }
+                }
+            }
+        }
+
+    } 
+
+
+}
+
+
+//------------Menu Fixed--------------//
+.menu-fixed{
+    displaY:none;
+    top:-200px;
+}
+//---------------------------------//
+
+
+
+
+//------------Boton up--------------//
+.btn-up{
+    display:none;
+    right: -80px;
+}
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//--------------banner-------------//
+//---------------------------------//
+.banner{
+    height: 100vh;
+        i{
+            font-size: $text;
+        }
+
+//------------Menu PC--------------//
+    .menu-header-pc{
+        display:none;
+    }
+//---------------------------------//
+
+
+
+
+
+
+//---------Personal Logo-----------//
+    .personal-logo{
+        height: $medium;
+    }
+//---------------------------------//
+
+
+
+
+
+//---------Personal Photo-----------//
+    .personal-photo {
+        @include flexboxbasic;
+    }
+
+//---------------------------------//
+
+
+
+
+
+//-------Personal Banner-----------//
+    .pesonal-banner{
+        text-align: center;
+
+        h2{
+            font-size: $subtitle;
+            margin-top: 2px;
+            margin-bottom:$medium;
+        }
+
+        h3{
+            font-size: $medium-subtitle;
+            margin: $small auto;
+        }
+
+
+        h4{
+            font-size: $text-big;
+            margin-top: 2px;
+            margin-bottom:$medium;
+        }
+    }
+
+
+    .social-media{
+            a{
+                margin: auto 2%;
+                i {
+                    margin: auto 2%;
+                    font-size: $text;
+                }
+            }
+    }
+
+
+
+}
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+
+
+
+
+//---------------------------------//
+//-------------About me------------//
+//---------------------------------//
+.aboutme{
+    margin-top:$medium;
+
+    .aboutme-test-slider{
+
+        .aboutme-text{
+        padding-left:0;
+        text-align: center;
+
+            h3{
+                color:$light-plate-1;
+                font-size: $text;
+                margin-bottom: $small;
+                text-align: center;
+            }
+
+            p{
+                font-size:$normal;
+                margin:$small;
+            }
+
+            &.hide{
+            display: none;
+            opacity: 0;
+            }           
+        }       
+    }
+
+    .aboutme-photo-slider{
+        @include flexboxbasic;
+        @include shadowbox;
+        width: 90%;
+        .aboutme-photo-slide{
+            padding:5%;
+            @include flexboxbasic;
+            margin: auto;
+            width: 90%;
+            @include lineargradientbasic;
+            img{
+                width:90%;
+                margin:auto;
+                cursor: pointer;
+                @include transitionbasicslow;
+                
+                &:hover{
+                    opacity:0.5;
+                }
+            }
+
+            &.hide{
+            display: none;
+            opacity: 0;
+            }
+        }
+    }
+}
+//---------------------------------//
+//---------------------------------//
+
+
+//----------------------------------------------//
+//--------------about me light box-------------//
+//--------------------------------------------//
+.about-me-light-box{
+
+    height:100vh;
+    display: none;
+
+
+        ul{
+
+            height: $small-medium;
+            width: 100%;
+            margin-bottom:$notes;
+            
+            li{
+                height: 100%;
+                margin: auto 2%;
+                a {
+                    font-size: $big-small;
+
+                    &:hover{
+                        color: $third-golden;
+                    }
+
+                    &.active{
+                        color: $third-golden;
+                        border-bottom: solid 2px $third-golden;                       
+                    }
+                    
+                }
+            }
+        }
+
+    .btn-light-box{
+        display:flex;
+        width:100%;
+        justify-content:flex-end;
+        align-items:center;
+
+        i{
+            font-size:$small-medium;
+            margin:$notes;
+            &:hover{
+                color:$primary-golden;
+            }
+        }
+
+    }
+
+    .container-aboutme-lightbox{
+        @include flexboxcolumn ;
+        width:100%;
+        display:none;
+        opacity:0;
+        height:400px;
+
+        &.active{
+            display:flex;
+            opacity:1;
+
+        }
+
+        .photo-aboutme-lightbox{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            width:100%;
+            height:180px;
+            margin-top:$notes;
+            
+                img{
+                    width: 80% ;
+                    margin:1px auto ; 
+                    display:block;
+                    max-height:150px;
+                }
+            }
+
+        .text-aboutme-lightbox{
+            display:flex;
+            align-items:center;
+            width:100%;
+            flex-direction:column;
+            text-align: center;
+            height:200px;
+
+                h3{
+                font-size:$small;  
+                margin: 6px auto;               
+                }
+
+                p{            
+                font-size:12px;
+                margin: 6px auto; 
+                }
+
+
+        }
+
+    }
+}
+
+
+
+
+
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//------------Experience-----------//
+//---------------------------------//
+.experience{
+    margin-top:$medium;
+
+    .expecience-container-text{
+        display:none;
+
+    }
+
+    .box-btn-container-experience{
+        @include flexboxcolumn;
+        @include buttonbasic;
+    }
+
+    .expecience-container-photos{
+
+        .experience-type{
+            .experence-photo{
+
+                h3{
+                    font-size: $text-big;
+                    margin: $small auto;
+                }
+
+                img{
+                    margin: $small auto;
+                    width:80%; 
+                }
+
+                p{
+                    font-size: $normal;
+                    margin: $small $small;
+                }
+            }
+
+            .expierence-text{
+
+                h3{
+                    font-size: $text-big;
+                    margin: $small auto;
+                }
+
+                p{
+                    font-size: $normal;
+                    margin: $small $small;
+                }
+            }
+        }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//------------Services-------------//
+//---------------------------------//
+
+.services{
+    margin-top:$medium;
+
+    .services-box{
+        text-align: center;
+        margin: $small-big auto;
+
+        h3{
+            font-size: $text-big;
+            margin: $small auto ;
+        }
+
+        .box-list-services{
+            text-align: center;
+
+            li{
+            font-size: $normal;
+            margin: $small auto ;
+        }
+        }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//--------------Skill--------------//
+//---------------------------------//
+.skill{
+    margin-top: $medium; 
+    margin-bottom: $medium;
+
+    .box-btn-skill{
+        @include flexboxcolumn;
+        @include buttonbasic;
+    }
+
+    h2{
+        margin-top: $medium; 
+    }
+
+    .box-up-skill{
+        @include flexboxbasic;
+        
+        .up-skill{
+            @include lineargradienmenu;
+            @include flexboxbasic;
+            width: 100%;
+            cursor: pointer;
+            padding:1%;
+            border-radius: 5px;
+            @include transitionbasicslow;
+
+            &:hover{
+                @include lineargradienservices;
+
+                h3{
+                    color:$third-golden;
+                }
+
+                i{
+                    color:$third-golden;         
+                }
+
+            }
+
+            h3{
+                font-size: $text;
+                color:$darnnes;
+                font-family: $gotham-title; 
+                margin:auto 6px;
+                @include transitionbasicslow;
+            }
+
+            i{
+                font-size: $text;
+                color:$darnnes;
+                @include transitionbasicslow;         
+            }
+        }
+
+
+
+    }
+
+    .skill-text{
+        display:none;      
+    }
+
+    .skill-photo-container{
+        @include flexboxbasic;
+        margin-top: $super-big;
+        text-align: center;
+
+        .boxskill{
+            @include shadowbox;
+            @include lineargradientbasic;
+            margin: $small auto;
+            @include flexboxbasic;
+            flex-wrap: wrap;
+            width:90%;
+            min-height:400px;
+        }
+
+
+//---------------------------------//
+//-----------Front End-------------//
+        .frontend{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:250px;
+
+                .bar-skill-html{
+                    height: $notes;
+                     margin-bottom: $medium;
+                }
+
+                .bar-skill-css{
+                    height: $notes;
+                     margin-bottom: $medium;
+                }
+
+                .bar-skill-js{
+                    height: $notes;
+                     margin-bottom: $medium;
+                }
+
+                .bar-skill-responsive{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-ui{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                    .bar-skill-ux{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+            
+                img{
+                    width:50%;
+                    margin-top: $small;
+                    max-height:200px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+
+            }
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//-------------backend-------------//
+        .backend{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:80px;
+                    width:100%;
+                }
+
+                .bar-skill-php{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-firebase{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-sql{
+                    height: $notes;
+                    margin-bottom: $medium;
+  
+                    
+                }
+
+                .bar-skill-nodejs{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-sqlserver{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $medium;
+                    max-height:200px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+        
+
+
+//---------------------------------//
+//----------technologies-----------//
+        .technologies{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:80px;
+                    width:100%;
+                }
+
+                .bar-skill-react{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-angular{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-github{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-git{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-typescript{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+            
+                .bar-skill-jquery{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:200px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//--------css-preprocessors--------//
+        .css-preprocessors{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+            
+                .bar-skill-less{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-sass{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:190px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//---------------data--------------//
+        .data{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:250px;
+
+                .h3-skill-container{
+                    margin-bottom:0;
+                }
+
+    
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:80px;
+                    width:100%;
+                }
+
+                .bar-skill-intelligence{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-cloud{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-bigdata{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-iot{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-kpis{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//----------music-producer---------//
+        .music-producer{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+                .bar-skill-cakewalk{
+                    height: $notes;
+                    margin-bottom: $medium;  
+                }
+
+                .bar-skill-cubase{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:160px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//----------Adobe---------//
+        .otros{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:80px;
+                    width:100%;
+                }
+
+                .bar-skill-illustrator{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-audition{
+                    height: $notes;
+                    margin-bottom: $medium;               
+                }
+
+                .bar-skill-photoshop{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-premier{
+                    height: $notes;
+                    margin-bottom: $medium; 
+                }
+
+                .bar-skill-xd{
+                    height: $notes;
+                    margin-bottom: $medium;                  
+                }
+
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$big-small, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+    }
+
+}
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//-----------Portafolio------------//
+//---------------------------------//
+.portfolio{
+    margin-top: $medium;
+
+    .box-img-portafolio{
+        
+        a{
+        width:90%; 
+        margin: $big-small auto;
+        padding:1%;
+            img{
+            width:90%;
+            margin: $big-small auto;
+
+            }
+        }
+    }
+}
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//-------------Contact-------------//
+//---------------------------------//
+.contact{
+    margin: $medium auto;
+    .contact-container{
+            width: 90%;
+            background-image: url('/assets/img/ejecutivo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+
+
+            .contact-container-form{
+            width: 100%;
+            background-color: rgba( $darnnes, 0.8);
+            border-radius: 5px;
+
+                form{
+                    width: 100%;
+                    text-align: center;
+
+                    .msg-container{
+                        h3{
+                        margin:$notes auto;
+                        }
+                    }
+
+                    .option-container{
+                        width: 80% ;
+                        margin: $notes auto;
+                        
+                        h3{
+                        margin-top: $notes;
+                        }
+
+                        .option-type{
+                            div{
+                                margin:$notes auto;
+                            }
+                        }
+                        
+                    }
+
+                    input{
+                        width:90%;
+                    }
+
+                    label, select, textarea, h3{
+                        font-size: $normal;
+                        margin:auto;
+                    }
+
+                    input, select, textarea{
+                        border:none;
+                        background-color: transparent;
+                        font-size: $normal;
+                        border-bottom: 1px $dark-golden solid;
+                    }
+
+                    textarea{
+                        border: 1px $dark-golden solid;
+                        height:100px;
+                        width:90%;
+                        margin: $small auto;
+                        border-radius: 5px;
+                    }
+
+                    option{
+                        border:none;
+                        font-size: $normal;
+                        border-radius: 5px;
+                    }
+
+                    input[type=radio]{
+                    appearance: none;
+                    @include transitionbasicslow;
+                    cursor:pointer;
+                    }
+
+
+                    [type=radio] {
+                        width: 18px;
+                        height: 18px;
+                        margin-right: 8px;
+                        }
+
+
+                    [type=radio]:checked::before{
+
+                        content: "";
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        background-color: $primary-golden;
+                        box-shadow: 0 0 2px  $primary-golden,
+                                    0 0 7px  $primary-golden,
+                                    0 0 12px  $primary-golden,
+                                    0 0 17px  $primary-golden,
+                                    0 0 22px  $primary-golden ; 
+                        position: absolute;
+                        top: 30%;
+                        left: 30%;
+                    }
+                }
+            }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//--------------Footer-------------//
+//---------------------------------//
+.footer{
+    p{
+        font-size: $normal;
+        margin:$big-small auto;
+    }
+
+    i{
+        margin: $small 2%;
+        font-size: $small;
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+}
+
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+@media(min-width:469px) and (max-width:568px)
+{
+//---------------------------------//
+//----------General Styles------------//
+//---------------------------------//
+h1{
+    font-size: $medium-title;
+    margin-top: $medium;
+    margin-bottom: 10px;
+}
+
+.title{
+    font-size: $subtitle;
+    margin-top:$big;
+    margin-bottom: $medium;
+}
+//---------------------------------//
+//---------------------------------//
+
+
+//------------Menu Movil--------------//
+.box-menu-movil{
+    @include flexboxbasic;
+    position: fixed;
+    top:-70px;
+    right:0;
+    z-index:99;
+    @include transitionbasicslow;
+
+    .box-logo-menuicon{
+        @include flexboxbasic;
+        @include lineargradienservicesmenu;
+        width:100%;
+
+        .box-icon{
+            display: flex;
+            justify-content: flex-end;
+            text-align: right;
+
+            i{
+                font-size: $medium-title;
+                color:$primary-golden;
+                margin-top:6px;
+                margin-right: $notes;
+                cursor: pointer;
+                @include transitionbasic;
+
+                &:hover{
+                    color:$dark-golden;
+                }
+            }
+        }
+
+        .box-logo{
+            i{
+                font-size: $subtitle;
+                color:$primary-golden;
+            }
+        }
+    }
+
+    .box-menu-list{
+        position: fixed;
+        top:42px;
+        right:-250px;
+        z-index:99;
+        @include transitionbasic;
+
+        @include flexboxbasic;
+        width:100%;
+        justify-content: flex-end;
+
+        .menu-movil{
+            @include flexboxbasic;
+            width:40%;
+            @include lineargradienmenu;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            ul{
+                li{
+                    margin: 6px auto;
+                    a{
+                    color:$primary-plate;
+                    font-family: $gotham-title;
+                    font-size: $medium-subtitle;
+                    @include transitionbasic;
+
+                        &:hover{
+                            color: $light-golden;
+                        }
+
+                        &.active{
+                            color:$white;
+                        }
+                    }
+                }
+            }
+        }
+
+    } 
+
+
+}
+
+
+//------------Menu Fixed--------------//
+.menu-fixed{
+    displaY:none;
+    top:-200px;
+}
+//---------------------------------//
+
+
+
+
+//------------Boton up--------------//
+.btn-up{
+    display:none;
+    right: -80px;
+}
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//--------------banner-------------//
+//---------------------------------//
+.banner{
+    height: 100vh;
+        i{
+            font-size: $text;
+        }
+
+//------------Menu PC--------------//
+    .menu-header-pc{
+        display:none;
+    }
+//---------------------------------//
+
+
+
+
+
+
+//---------Personal Logo-----------//
+    .personal-logo{
+        height: $medium;
+    }
+//---------------------------------//
+
+
+
+
+
+//---------Personal Photo-----------//
+    .personal-photo {
+        @include flexboxbasic;
+    }
+
+//---------------------------------//
+
+
+
+
+
+//-------Personal Banner-----------//
+    .pesonal-banner{
+        text-align: center;
+
+        h2{
+            font-size: $title;
+            margin-top: 2px;
+            margin-bottom:$medium;
+        }
+
+        h3{
+            font-size: $medium-subtitle;
+            margin: $small auto;
+        }
+
+
+        h4{
+            font-size: $text-big;
+            margin-top: 2px;
+            margin-bottom:$medium;
+        }
+    }
+
+
+    .social-media{
+            a{
+                margin: auto 2%;
+                i {
+                    margin: auto 2%;
+                    font-size:$medium-subtitle;
+                }
+            }
+    }
+
+
+
+}
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+
+
+
+
+//---------------------------------//
+//-------------About me------------//
+//---------------------------------//
+.aboutme{
+    margin-top:$medium;
+
+    .aboutme-test-slider{
+
+        .aboutme-text{
+        padding-left:0;
+        text-align: center;
+
+            h3{
+                color:$light-plate-1;
+                font-size: $text;
+                margin-bottom: $small;
+                text-align: center;
+            }
+
+            p{
+                font-size:$text-big;
+                margin:$small;
+            }
+
+            &.hide{
+            display: none;
+            opacity: 0;
+            }           
+        }       
+    }
+
+    .aboutme-photo-slider{
+        @include flexboxbasic;
+        @include shadowbox;
+        width: 90%;
+        .aboutme-photo-slide{
+            padding:5%;
+            @include flexboxbasic;
+            margin: auto;
+            width: 90%;
+            @include lineargradientbasic;
+            img{
+                width:90%;
+                margin:auto;
+                cursor: pointer;
+                @include transitionbasicslow;
+                
+                &:hover{
+                    opacity:0.5;
+                }
+            }
+
+            &.hide{
+            display: none;
+            opacity: 0;
+            }
+        }
+    }
+}
+//---------------------------------//
+//---------------------------------//
+
+
+//----------------------------------------------//
+//--------------about me light box-------------//
+//--------------------------------------------//
+.about-me-light-box{
+
+    height:100vh;
+    display: none;
+
+
+        ul{
+
+            height: $small-medium;
+            width: 100%;
+            margin-bottom:$notes;
+            
+            li{
+                height: 100%;
+                margin: auto 2%;
+                a {
+                    font-size: $big-small;
+
+                    &:hover{
+                        color: $third-golden;
+                    }
+
+                    &.active{
+                        color: $third-golden;
+                        border-bottom: solid 2px $third-golden;                       
+                    }
+                    
+                }
+            }
+        }
+
+    .btn-light-box{
+        display:flex;
+        width:100%;
+        justify-content:flex-end;
+        align-items:center;
+
+        i{
+            font-size:$small-medium;
+            margin:$notes;
+            &:hover{
+                color:$primary-golden;
+            }
+        }
+
+    }
+
+    .container-aboutme-lightbox{
+        @include flexboxcolumn ;
+        width:100%;
+        display:none;
+        opacity:0;
+        height:500px;
+
+        &.active{
+            display:flex;
+            opacity:1;
+
+        }
+
+        .photo-aboutme-lightbox{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            width:100%;
+            height:200px;
+            margin-top:$big-small;
+            
+                img{
+                    width: 80% ;
+                    margin:$small auto ; 
+                    display:block;
+                    max-height:190px;
+                }
+            }
+
+        .text-aboutme-lightbox{
+            display:flex;
+            align-items:center;
+            width:100%;
+            flex-direction:column;
+            text-align: center;
+            height:250px;
+
+                h3{
+                font-size:$big-small;  
+                margin: 12px auto;               
+                }
+
+                p{            
+                font-size:$small;
+                margin: 6px 2%; 
+                }
+
+
+        }
+
+    }
+}
+
+
+
+
+
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//------------Experience-----------//
+//---------------------------------//
+.experience{
+    margin-top:$small-big;
+
+    .expecience-container-text{
+        display:none;
+
+    }
+
+    .box-btn-container-experience{
+        @include flexboxcolumn;
+        @include buttonbasic;
+    }
+
+    .expecience-container-photos{
+
+        .experience-type{
+            .experence-photo{
+
+                h3{
+                    font-size: $medium-subtitle;
+                    margin: $small auto;
+                }
+
+                img{
+                    margin: $small auto;
+                    width:80%; 
+                }
+
+                p{
+                    font-size: $text-big;
+                    margin: $small $small;
+                }
+            }
+
+            .expierence-text{
+
+                h3{
+                    font-size: $medium-subtitle;
+                    margin: $small auto;
+                }
+
+                p{
+                    font-size: $text;
+                    margin: $small $small;
+                }
+            }
+        }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//------------Services-------------//
+//---------------------------------//
+
+.services{
+    margin-top:$small-big;
+
+    .services-box{
+        text-align: center;
+        margin: $small-big auto;
+
+        h3{
+            font-size: $medium-subtitle;
+            margin: $small auto ;
+        }
+
+        .box-list-services{
+            text-align: center;
+
+            li{
+            font-size: $text;
+            margin: $small auto ;
+        }
+        }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//--------------Skill--------------//
+//---------------------------------//
+.skill{
+    margin-top: $small-big; 
+    margin-bottom: $medium;
+
+    .box-btn-skill{
+        @include flexboxcolumn;
+        @include buttonbasic;
+    }
+
+    h2{
+        margin-top: $medium; 
+    }
+
+    .box-up-skill{
+        @include flexboxbasic;
+        
+        .up-skill{
+            @include lineargradienmenu;
+            @include flexboxbasic;
+            width: 100%;
+            cursor: pointer;
+            padding:1%;
+            border-radius: 5px;
+            @include transitionbasicslow;
+
+            &:hover{
+                @include lineargradienservices;
+
+                h3{
+                    color:$third-golden;
+                }
+
+                i{
+                    color:$third-golden;         
+                }
+
+            }
+
+            h3{
+                font-size: $text;
+                color:$darnnes;
+                font-family: $gotham-title; 
+                margin:auto 6px;
+                @include transitionbasicslow;
+            }
+
+            i{
+                font-size: $text;
+                color:$darnnes;
+                @include transitionbasicslow;         
+            }
+        }
+
+
+
+    }
+
+    .skill-text{
+        display:none;      
+    }
+
+    .skill-photo-container{
+        @include flexboxbasic;
+        margin-top: $super-big;
+        text-align: center;
+
+        .boxskill{
+            @include shadowbox;
+            @include lineargradientbasic;
+            margin: $small auto;
+            @include flexboxbasic;
+            flex-wrap: wrap;
+            width:90%;
+            min-height:500px;
+        }
+
+
+//---------------------------------//
+//-----------Front End-------------//
+        .frontend{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:250px;
+
+                .bar-skill-html{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-css{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-js{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-responsive{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-ui{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                    .bar-skill-ux{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+            
+                img{
+                    width:50%;
+                    margin-top: $small;
+                    max-height:200px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+
+            }
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//-------------backend-------------//
+        .backend{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:250px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:100px;
+                    width:100%;
+                }
+
+
+                .bar-skill-php{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-firebase{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-sql{
+                    height: $notes;
+                    margin-bottom: $medium;
+  
+                    
+                }
+
+                .bar-skill-nodejs{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-sqlserver{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $medium;
+                    max-height:200px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+        
+
+
+//---------------------------------//
+//----------technologies-----------//
+        .technologies{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:300px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:100px;
+                    width:100%;
+                }
+
+                .bar-skill-react{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-angular{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-github{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-git{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-typescript{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+            
+                .bar-skill-jquery{
+                    height: $notes;
+                    margin-bottom: $medium;
+                    
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:200px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//--------css-preprocessors--------//
+        .css-preprocessors{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+            
+                .bar-skill-less{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-sass{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:190px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//---------------data--------------//
+        .data{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:250px;
+
+                .h3-skill-container{
+                    margin-bottom:0;
+                }
+
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:100px;
+                    width:100%;
+                }
+
+                .bar-skill-intelligence{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-cloud{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-bigdata{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-iot{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-kpis{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//----------music-producer---------//
+        .music-producer{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:200px;
+
+                .bar-skill-cakewalk{
+                    height: $notes;
+                    margin-bottom: $medium;  
+                }
+
+                .bar-skill-cubase{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:160px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//----------Adobe---------//
+        .otros{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:60%;
+                padding:1%;
+                max-height:250px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:100px;
+                    width:100%;
+                }
+
+                .bar-skill-illustrator{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-audition{
+                    height: $notes;
+                    margin-bottom: $medium;               
+                }
+
+                .bar-skill-photoshop{
+                    height: $notes;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-premier{
+                    height: $notes;
+                    margin-bottom: $medium; 
+                }
+
+                .bar-skill-xd{
+                    height: $notes;
+                    margin-bottom: $medium;                  
+                }
+
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+    }
+
+}
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//-----------Portafolio------------//
+//---------------------------------//
+.portfolio{
+    margin-top: $small-big;
+
+    .box-img-portafolio{
+        
+        a{
+        width:90%; 
+        margin: $small auto;
+        padding:1%;
+            img{
+            width:90%;
+            margin: $big-small auto;
+
+            }
+        }
+    }
+}
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//-------------Contact-------------//
+//---------------------------------//
+.contact{
+    margin: $small-big auto;
+    .contact-container{
+            width: 90%;
+            background-image: url('/assets/img/ejecutivo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+
+
+            .contact-container-form{
+            width: 100%;
+            background-color: rgba( $darnnes, 0.8);
+            border-radius: 5px;
+
+                form{
+                    width: 100%;
+                    text-align: center;
+
+                    .msg-container{
+                        h3{
+                        margin:$notes auto;
+                        }
+                    }
+
+                    .option-container{
+                        width: 80% ;
+                        margin: $notes auto;
+                        
+                        h3{
+                        margin-top: $notes;
+                        }
+
+                        .option-type{
+                            div{
+                                margin:$notes auto;
+                            }
+                        }
+                        
+                    }
+
+                    input{
+                        width:90%;
+                    }
+
+                    label, select, textarea, h3{
+                        font-size: $text;
+                        margin:auto;
+                    }
+
+                    input, select, textarea{
+                        border:none;
+                        background-color: transparent;
+                        font-size: $text;
+                        border-bottom: 1px $dark-golden solid;
+                    }
+
+                    textarea{
+                        border: 1px $dark-golden solid;
+                        height:100px;
+                        width:90%;
+                        margin: $small auto;
+                        border-radius: 5px;
+                    }
+
+                    option{
+                        border:none;
+                        font-size: $normal;
+                        border-radius: 5px;
+                    }
+
+                    input[type=radio]{
+                    appearance: none;
+                    @include transitionbasicslow;
+                    cursor:pointer;
+                    }
+
+
+                    [type=radio] {
+                        width: 18px;
+                        height: 18px;
+                        margin-right: 8px;
+                        }
+
+
+                    [type=radio]:checked::before{
+
+                        content: "";
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: $primary-golden;
+                        box-shadow: 0 0 2px  $primary-golden,
+                                    0 0 7px  $primary-golden,
+                                    0 0 12px  $primary-golden,
+                                    0 0 17px  $primary-golden,
+                                    0 0 22px  $primary-golden ; 
+                        position: absolute;
+                        top: 20%;
+                        left: 20%;
+                    }
+                }
+            }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//--------------Footer-------------//
+//---------------------------------//
+.footer{
+    p{
+        font-size: $normal;
+        margin:$big-small auto;
+    }
+
+    i{
+        margin: $small 2%;
+        font-size: $small;
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+}
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+@media(min-width:569px) and (max-width:768px)
+{
+//---------------------------------//
+//----------General Styles------------//
+//---------------------------------//
+h1{
+    font-size: $medium-title;
+    margin-top: $medium;
+    margin-bottom: 10px;
+}
+
+.title{
+    font-size: $subtitle;
+    margin-top:$big;
+    margin-bottom: $medium;
+}
+//---------------------------------//
+//---------------------------------//
+
+
+//------------Menu Movil--------------//
+.box-menu-movil{
+    @include flexboxbasic;
+    position: fixed;
+    top:-70px;
+    right:0;
+    z-index:99;
+    @include transitionbasicslow;
+
+    .box-logo-menuicon{
+        @include flexboxbasic;
+        @include lineargradienservicesmenu;
+        width:100%;
+
+        .box-icon{
+            display: flex;
+            justify-content: flex-end;
+            text-align: right;
+
+            i{
+                font-size: $medium-title;
+                color:$primary-golden;
+                margin-top:6px;
+                margin-right: $notes;
+                cursor: pointer;
+                @include transitionbasic;
+
+                &:hover{
+                    color:$dark-golden;
+                }
+            }
+        }
+
+        .box-logo{
+            i{
+                font-size: $subtitle;
+                color:$primary-golden;
+            }
+        }
+    }
+
+    .box-menu-list{
+        position: fixed;
+        top:42px;
+        right:-350px;
+        z-index:99;
+        @include transitionbasic;
+
+        @include flexboxbasic;
+        width:100%;
+        justify-content: flex-end;
+
+        .menu-movil{
+            @include flexboxbasic;
+            width:40%;
+            @include lineargradienmenu;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            ul{
+                li{
+                    margin: 6px auto;
+                    a{
+                    color:$primary-plate;
+                    font-family: $gotham-title;
+                    font-size: $medium-subtitle;
+                    @include transitionbasic;
+
+                        &:hover{
+                            color: $light-golden;
+                        }
+
+                        &.active{
+                            color:$white;
+                        }
+                    }
+                }
+            }
+        }
+
+    } 
+
+
+}
+
+
+//------------Menu Fixed--------------//
+.menu-fixed{
+    displaY:none;
+    top:-200px;
+}
+//---------------------------------//
+
+
+
+
+//------------Boton up--------------//
+.btn-up{
+    display:none;
+    right: -80px;
+}
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//--------------banner-------------//
+//---------------------------------//
+.banner{
+    height: 100vh;
+        i{
+            font-size: $text;
+        }
+
+//------------Menu PC--------------//
+    .menu-header-pc{
+        display:none;
+    }
+//---------------------------------//
+
+
+
+
+
+
+//---------Personal Logo-----------//
+    .personal-logo{
+        height: $medium;
+    }
+//---------------------------------//
+
+
+
+
+
+//---------Personal Photo-----------//
+    .personal-photo {
+        @include flexboxbasic;
+    }
+
+//---------------------------------//
+
+
+
+
+
+//-------Personal Banner-----------//
+    .pesonal-banner{
+        text-align: center;
+
+        h2{
+            font-size: $title;
+            margin-top: 2px;
+            margin-bottom:$medium;
+        }
+
+        h3{
+            font-size: $medium-subtitle;
+            margin: $small auto;
+        }
+
+
+        h4{
+            font-size: $text-big;
+            margin-top: 2px;
+            margin-bottom:$medium;
+        }
+    }
+
+
+    .social-media{
+            a{
+                margin: auto 2%;
+                i {
+                    margin: auto 2%;
+                    font-size:$medium-subtitle;
+                }
+            }
+    }
+
+
+
+}
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+
+
+
+
+//---------------------------------//
+//-------------About me------------//
+//---------------------------------//
+.aboutme{
+    margin-top:$medium;
+
+    .aboutme-test-slider{
+
+        .aboutme-text{
+        padding-left:0;
+        text-align: center;
+
+            h3{
+                color:$light-plate-1;
+                font-size: $text;
+                margin-bottom: $small;
+                text-align: center;
+            }
+
+            p{
+                font-size:$text-big;
+                margin:$small;
+            }
+
+            &.hide{
+            display: none;
+            opacity: 0;
+            }           
+        }       
+    }
+
+    .aboutme-photo-slider{
+        @include flexboxbasic;
+        @include shadowbox;
+        width: 90%;
+        .aboutme-photo-slide{
+            padding:5%;
+            @include flexboxbasic;
+            margin: auto;
+            width: 90%;
+            @include lineargradientbasic;
+            img{
+                width:90%;
+                margin:auto;
+                cursor: pointer;
+                @include transitionbasicslow;
+                
+                &:hover{
+                    opacity:0.5;
+                }
+            }
+
+            &.hide{
+            display: none;
+            opacity: 0;
+            }
+        }
+    }
+}
+//---------------------------------//
+//---------------------------------//
+
+
+//----------------------------------------------//
+//--------------about me light box-------------//
+//--------------------------------------------//
+.about-me-light-box{
+    @include flexboxbasic;
+    position: fixed;
+    z-index: 999;
+    top:0;
+    left:0;
+    background-color: rgba( $darnnes, 0.9 ) ;
+    height:100vh;
+    width:100%;
+    display: none;
+
+
+        ul{
+            @include flexboxbasic;
+            align-content: space-between;
+            height: $medium;
+            width: 100%;
+            flex-wrap: wrap;
+            margin-bottom:$small;
+            justify-content:center;
+            
+            li{
+                height: 100%;
+                @include flexboxbasic;
+                margin: auto 2%;
+                a {
+                    color: $white;
+                    font-family: $gotham-title;
+                    font-size: $small-medium;
+                    @include transitionbasic;
+                    border-bottom: solid 2px rgba( $darnnes, 0.9 ) ;
+
+                    &:hover{
+                        color: $third-golden;
+                    }
+
+                    &.active{
+                        color: $third-golden;
+                        border-bottom: solid 2px $third-golden;                       
+                    }
+                    
+                }
+            }
+        }
+
+    .btn-light-box{
+        display:flex;
+        width:100%;
+        justify-content:flex-end;
+        align-items:center;
+
+        i{
+            color:$secundary-golden;
+            font-size:$small-big;
+            margin:$small;
+            cursor: pointer;
+            @include transitionbasic;
+
+            &:hover{
+                color:$primary-golden;
+            }
+        }
+
+    }
+
+    .container-aboutme-lightbox{
+        @include flexboxcolumn;
+        width:100%;
+        @include transitionbasicslow;
+        display:none;
+        opacity:0;
+        height:600px;
+
+        &.active{
+            display:flex;
+            opacity:1;
+
+        }
+
+        .photo-aboutme-lightbox{
+            display:flex;
+            align-items:start;
+            justify-content:center;
+            width:100%;
+            height:40%;
+            
+                img{
+                    width: 70% ;
+                    margin:auto; 
+                    display:block;
+                    max-height:240px;
+
+                }
+            }
+
+        .text-aboutme-lightbox{
+            display:flex;
+            align-items:start;
+            width:100%;
+            flex-direction:column;
+            text-align: center;
+            height:40%;
+
+                h3{
+                color:$light-golden;
+                font-family:$gotham-title;
+                font-size:$small-medium;  
+                margin: $small auto;               
+                }
+
+                p{            
+                color:$light-golden;
+                font-family:$gotham-text;
+                font-size:$small;
+                margin: $small 2%; 
+                }
+
+
+        }
+
+    }
+}
+
+
+
+
+
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//------------Experience-----------//
+//---------------------------------//
+.experience{
+    margin-top:$small-big;
+
+    .expecience-container-text{
+        display:none;
+
+    }
+
+    .box-btn-container-experience{
+        @include flexboxcolumn;
+        @include buttonbasic;
+    }
+
+    .expecience-container-photos{
+
+        .experience-type{
+            .experence-photo{
+
+                h3{
+                    font-size: $medium-subtitle;
+                    margin: $small auto;
+                }
+
+                img{
+                    margin: $small auto;
+                    width:80%; 
+                }
+
+                p{
+                    font-size: $text-big;
+                    margin: $small $small;
+                }
+            }
+
+            .expierence-text{
+
+                h3{
+                    font-size: $medium-subtitle;
+                    margin: $small auto;
+                }
+
+                p{
+                    font-size: $text;
+                    margin: $small $small;
+                }
+            }
+        }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//------------Services-------------//
+//---------------------------------//
+
+.services{
+    margin-top:$small-big;
+
+    .services-box{
+        text-align: center;
+        margin: $small-big auto;
+
+        h3{
+            font-size: $medium-subtitle;
+            margin: $small auto ;
+        }
+
+        .box-list-services{
+            text-align: center;
+
+            li{
+            font-size: $text;
+            margin: $small auto ;
+        }
+        }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//--------------Skill--------------//
+//---------------------------------//
+.skill{
+    margin-top: $small-big; 
+    margin-bottom: $medium;
+
+    .box-btn-skill{
+        @include flexboxcolumn;
+        @include buttonbasic;
+    }
+
+    h2{
+        margin-top: $medium; 
+    }
+
+    .box-up-skill{
+        @include flexboxbasic;
+        
+        .up-skill{
+            @include lineargradienmenu;
+            @include flexboxbasic;
+            width: 100%;
+            cursor: pointer;
+            padding:1%;
+            border-radius: 5px;
+            @include transitionbasicslow;
+
+            &:hover{
+                @include lineargradienservices;
+
+                h3{
+                    color:$third-golden;
+                }
+
+                i{
+                    color:$third-golden;         
+                }
+
+            }
+
+            h3{
+                font-size: $text;
+                color:$darnnes;
+                font-family: $gotham-title; 
+                margin:auto 6px;
+                @include transitionbasicslow;
+            }
+
+            i{
+                font-size: $text;
+                color:$darnnes;
+                @include transitionbasicslow;         
+            }
+        }
+
+
+
+    }
+
+    .skill-text{
+        display:none;      
+    }
+
+    .skill-photo-container{
+        @include flexboxbasic;
+        margin-top: $super-big;
+        text-align: center;
+
+        .boxskill{
+            @include shadowbox;
+            @include lineargradientbasic;
+            margin: $small auto;
+            @include flexboxbasic;
+            flex-wrap: wrap;
+            width:80%;
+            min-height:550px;
+        }
+
+
+//---------------------------------//
+//-----------Front End-------------//
+        .frontend{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:45%;
+                padding:1%;
+                max-height:250px;
+                min-height:230px;
+
+                .h3-skill-container{
+                    @include flexboxbasic;
+                    width:100%;
+                    height:36px;
+                }
+
+                .bar-skill-html{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-css{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-js{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-responsive{
+                    height: $small;
+                    margin-bottom: $notes;
+                    margin-top:$big;
+                }
+
+                .bar-skill-ui{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+
+                    .bar-skill-ux{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+            
+                img{
+                    width:50%;
+                    margin-top: $small;
+                    max-height:200px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+
+            }
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//-------------backend-------------//
+        .backend{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:45%;
+                padding:1%;
+                max-height:250px;
+                min-height:240px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:147px;
+                    width:100%;
+                }
+
+                .bar-skill-php{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-firebase{
+                    height: $small;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-sql{
+                    height: $small;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-nodejs{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-sqlserver{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $medium;
+                    max-height:200px;
+
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+        
+
+
+//---------------------------------//
+//----------technologies-----------//
+        .technologies{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:45%;
+                padding:1%;
+                max-height:300px;
+                min-height:250px;
+
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:147px;
+                    width:100%;
+                }
+
+                .bar-skill-react{
+                    height: $small;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-angular{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-github{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-git{
+                    height: $small;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-typescript{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+            
+                .bar-skill-jquery{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:200px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//--------css-preprocessors--------//
+        .css-preprocessors{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:55%;
+                padding:1%;
+                max-height:200px;
+
+            
+                .bar-skill-less{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-sass{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:190px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//---------------data--------------//
+        .data{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:45%;
+                padding:1%;
+                max-height:250px;
+        
+                .h3-skill-container{
+                    margin-bottom:0;
+                }
+
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:147px;
+                    width:100%;
+                }
+
+                .bar-skill-intelligence{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-cloud{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-bigdata{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-iot{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-kpis{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//----------music-producer---------//
+        .music-producer{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:55%;
+                padding:1%;
+                max-height:200px;
+
+                .bar-skill-cakewalk{
+                    height: $small;
+                    margin-bottom: $medium;  
+                }
+
+                .bar-skill-cubase{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:160px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//----------Adobe---------//
+        .otros{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:45%;
+                padding:1%;
+                max-height:250px;
+                min-height:220px;
+
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:120px;
+                    width:100%;
+                }
+
+                .bar-skill-illustrator{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-audition{
+                    height: $small;
+                    margin-bottom: $medium;               
+                }
+
+                .bar-skill-photoshop{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-premier{
+                    height: $small;
+                    margin-bottom: $medium; 
+                }
+
+                .bar-skill-xd{
+                    height: $small;
+                    margin-bottom: $medium;                  
+                }
+
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+    }
+
+}
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+
+
+//---------------------------------//
+//-----------Portafolio------------//
+//---------------------------------//
+.portfolio{
+    margin-top: $small-big;
+
+    .box-img-portafolio{
+        
+        a{
+        width:90%; 
+        margin: $small auto;
+        padding:1%;
+            img{
+            width:90%;
+            margin: $big-small auto;
+
+            }
+        }
+    }
+}
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//-------------Contact-------------//
+//---------------------------------//
+.contact{
+    margin: $small-big auto;
+    .contact-container{
+            width: 90%;
+            background-image: url('/assets/img/ejecutivo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+
+
+            .contact-container-form{
+            width: 100%;
+            background-color: rgba( $darnnes, 0.8);
+            border-radius: 5px;
+
+                form{
+                    width: 100%;
+                    text-align: center;
+
+                    .msg-container{
+                        h3{
+                        margin:$notes auto;
+                        }
+                    }
+
+                    .option-container{
+                        width: 80% ;
+                        margin: $notes auto;
+                        
+                        h3{
+                        margin-top: $notes;
+                        }
+
+                        .option-type{
+                            div{
+                                margin:$notes auto;
+                            }
+                        }
+                        
+                    }
+
+                    input{
+                        width:90%;
+                    }
+
+                    label, select, textarea, h3{
+                        font-size: $text;
+                        margin:auto;
+                    }
+
+                    input, select, textarea{
+                        border:none;
+                        background-color: transparent;
+                        font-size: $text;
+                        border-bottom: 1px $dark-golden solid;
+                    }
+
+                    textarea{
+                        border: 1px $dark-golden solid;
+                        height:100px;
+                        width:90%;
+                        margin: $small auto;
+                        border-radius: 5px;
+                    }
+
+                    option{
+                        border:none;
+                        font-size: $normal;
+                        border-radius: 5px;
+                    }
+
+                    input[type=radio]{
+                    appearance: none;
+                    @include transitionbasicslow;
+                    cursor:pointer;
+                    }
+
+
+                    [type=radio] {
+                        width: 18px;
+                        height: 18px;
+                        margin-right: 8px;
+                        }
+
+
+                    [type=radio]:checked::before{
+
+                        content: "";
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: $primary-golden;
+                        box-shadow: 0 0 2px  $primary-golden,
+                                    0 0 7px  $primary-golden,
+                                    0 0 12px  $primary-golden,
+                                    0 0 17px  $primary-golden,
+                                    0 0 22px  $primary-golden ; 
+                        position: absolute;
+                        top: 20%;
+                        left: 20%;
+                    }
+                }
+            }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//--------------Footer-------------//
+//---------------------------------//
+.footer{
+    p{
+        font-size: $normal;
+        margin:$big-small auto;
+    }
+
+    i{
+        margin: $small 2%;
+        font-size: $small;
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+}
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//
+
+@media(min-width:769px) and (max-width:1024px)
+{
+h1{
+    font-size: $super-title;
+    font-family: $gotham-principal;
+    margin-top: $medium;
+    margin-bottom: 2px;
+}
+
+.title{
+    font-size: $title;
+    font-family: $gotham-title;
+    margin-top:$super-big;
+    margin-bottom: $big;
+}
+
+
+//---------------------------------//
+//---------------------------------//
+
+//------------Menu Movil--------------//
+.box-menu-movil{
+    display:none;
+}
+
+
+//------------Menu Fixed--------------//
+.menu-fixed{
+    position: fixed;
+    top:0;
+    left:0px;
+    z-index:99;
+    
+
+    .logo-fixed{
+        height: $super-big;
+        i{
+            font-size:$medium;
+            cursor: pointer;
+            @include transitionbasic;
+
+            &:hover{
+                color: $white;
+                }
+
+        }
+
+    }
+
+    .menu-movil-fixed{
+        opacity: 0;
+        height: $super-big;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: 100%;
+        display:noneM
+
+        ul{
+            @include flexboxbasic;
+            align-content: space-between;
+            height: $super-big;
+            width: 100%;
+            flex-wrap: wrap;
+            
+            li{
+                height: 100%;
+                @include flexboxbasic;
+                margin: auto 2%;
+                a {
+                    font-family: $gotham-title;
+                    font-size: $text;
+                }
+            }
+        }
+    }
+}
+//---------------------------------//
+
+
+
+
+//------------Boton up--------------//
+.btn-up{
+    width: 60px;
+    position: fixed;
+    right: 10px;
+    bottom:10px;
+    z-index: 99;
+    border-radius: 30px;
+    right: -80px;
+    @include transitionbasicslow;
+    
+    .container-btn-up{
+        @include flexboxbasic;
+        width:40px;
+        height:40px;
+        border-radius: 20px;
+
+        i{
+        font-size: $small-big;
+        @include transitionbasic;
+        border-radius: 20px;
+        cursor:pointer;
+
+            &:hover{
+                @include shadowsshine;
+            }
+
+        }
+    }
+}
+
+//---------------------------------//
+
+//---------------------------------//
+//--------------banner-------------//
+//---------------------------------//
+.banner{
+    height: 100vh;
+        i{
+            font-size: $title;
+        }
+
+//------------Menu PC--------------//
+    .menu-header-pc{
+
+        height: $super-big;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: 100%;
+
+        ul{
+            align-content: space-between;
+            height: $super-big;
+            width: 100%;
+            flex-wrap: wrap;
+            
+            li{
+                height: 100%;
+                margin: auto 2%;
+                a {
+                    font-family: $gotham-title;
+                    font-size: $text;                   
+                }
+            }
+        }
+
+
+    }
+//---------------------------------//
+
+
+
+
+
+
+//---------Personal Logo-----------//
+    .personal-logo{
+        @include flexboxbasic;
+        height: $super-big;
+    }
+//---------------------------------//
+
+
+
+
+
+//---------Personal Photo-----------//
+    .personal-photo {
+        @include flexboxbasic;
+    }
+
+//---------------------------------//
+
+
+
+
+
+//-------Personal Banner-----------//
+    .pesonal-banner{
+        text-align: center;
+        @include flexboxcolumn;
+
+        h2{
+            font-family: $gotham-title;
+            font-size: $medium-title;
+            margin-top: 2px;
+            margin-bottom:$medium;
+        }
+
+        h3{
+            font-family: $gotham-secundary;
+            font-size: $subtitle;
+            margin: $small auto;
+        }
+
+
+        h4{
+            font-family: $gotham-text;
+            font-size: $medium-subtitle;
+            margin-top: 2px;
+            margin-bottom:$medium;
+        }
+    }
+
+
+    .social-media{
+            a{
+                margin: auto 2%;
+                i {
+                    margin: auto 2%;
+                    font-size: $small-medium;
+                }
+            }
+    }
+
+
+
+}
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+
+
+
+
+//---------------------------------//
+//-------------About me------------//
+//---------------------------------//
+.aboutme{
+    margin-top:$super-big;
+
+
+        
+
+    .aboutme-test-slider{
+        @include flexboxbasic;
+        flex-direction:column;
+
+        .aboutme-text{
+        padding-left:$medium;
+        width: 100%;
+
+            h3{
+                font-size: $subtitle;
+                margin-bottom: $small;
+                text-align: center;
+            }
+
+            p{
+                font-size:$text-big;
+                margin:$small;
+            }
+
+            &.hide{
+            display: none;
+            opacity: 0;
+            }           
+        }       
+    }
+
+    .aboutme-photo-slider{
+        width: 90%;
+        .aboutme-photo-slide{
+            padding:5%;
+            margin: auto;
+            width: 90%;
+            img{
+                width:90%;
+                margin:auto;
+                cursor: pointer;
+            }
+
+            &.hide{
+            display: none;
+            opacity: 0;
+            }
+        }
+        &.hide{
+            display: none;
+            opacity: 0;
+        }
+
+    }
+}
+//---------------------------------//
+//---------------------------------//
+
+//----------------------------------------------//
+//--------------about me light box-------------//
+//--------------------------------------------//
+.about-me-light-box{
+    @include flexboxbasic;
+    position: fixed;
+    z-index: 999;
+    top:0;
+    left:0;
+    background-color: rgba( $darnnes, 0.9 ) ;
+    height:100vh;
+    display: none;
+
+
+        ul{
+            @include flexboxbasic;
+            align-content: space-between;
+            height: $super-big;
+            width: 100%;
+            flex-wrap: wrap;
+            margin-bottom:$big-small;
+            
+            li{
+                height: 100%;
+                @include flexboxbasic;
+                margin: auto 2%;
+                a {
+                    color: $white;
+                    font-family: $gotham-title;
+                    font-size: $small-big;
+                    @include transitionbasic;
+                    border-bottom: solid 2px rgba( $darnnes, 0.9 ) ;
+
+                    &:hover{
+                        color: $third-golden;
+                    }
+
+                    &.active{
+                        color: $third-golden;
+                        border-bottom: solid 2px $third-golden;                       
+                    }
+                    
+                }
+            }
+        }
+
+    .btn-light-box{
+        display:flex;
+        width:100%;
+        justify-content:flex-end;
+        align-items:center;
+
+        i{
+            color:$secundary-golden;
+            font-size:$big;
+            margin:$big-small;
+            cursor: pointer;
+            @include transitionbasic;
+
+            &:hover{
+                color:$primary-golden;
+            }
+        }
+
+    }
+
+    .container-aboutme-lightbox{
+        @include flexboxbasic;
+        width:100%;
+        @include transitionbasicslow;
+        display:none;
+        opacity:0;
+        height:800px;
+
+        &.active{
+            display:flex;
+            opacity:1;
+
+        }
+
+        .photo-aboutme-lightbox{
+            display:flex;
+            align-items:start;
+            justify-content:center;
+            width:50%;
+            height:90%;
+            
+                img{
+                    width: 80% ;
+                    margin:auto 5% ; 
+                }
+            }
+
+        .text-aboutme-lightbox{
+            display:flex;
+            align-items:start;
+            width:50%;
+            flex-direction:column;
+            text-align: left;
+            height:90%;
+
+                h3{
+                color:$light-golden;
+                font-family:$gotham-title;
+                font-size:$medium;  
+                margin: $small auto;               
+                }
+
+                p{            
+                color:$light-golden;
+                font-family:$gotham-text;
+                font-size:$big-small;
+                margin: $small auto; 
+                }
+
+
+        }
+
+    }
+}
+
+
+
+
+
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//------------Experience-----------//
+//---------------------------------//
+.experience{
+    margin-top:$super-big;
+
+    .expecience-container-text{
+        @include flexboxbasic;
+    }
+
+        .box-btn-container-experience{
+            displaY:none;
+    }
+
+
+
+    .expecience-container-photos{
+        @include flexboxbasic;
+
+        .experience-type{
+            @include flexboxcolumn;
+            width:90%;
+            position: relative;
+            @include shadowbox;
+            margin: $small auto;
+
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .experence-photo{
+                @include flexboxcolumn;
+                width:100%;
+                @include lineargradientbasic;
+                @include transitionbasicslow;
+                cursor: pointer;
+
+                &.opacity-container{
+                    opacity: 0.3;
+                }
+
+                h3{
+                    font-family: $gotham-subtitle;
+                    font-size: $subtitle;
+                    margin: $small auto;
+                    color:$light-plate-1;
+                }
+
+                img{
+                    margin: $small auto;
+                    width:80%; 
+                }
+
+                p{
+                    font-size: $small;
+                    font-family: $gotham-text;
+                    margin: $small $small;
+                }
+            }
+
+            .expierence-text{
+                position: absolute;
+                top:0;
+                left:0;
+                height: 100%;
+                @include flexboxcolumn;
+                opacity: 0;
+                @include transitionbasicslow;
+                text-align: center;
+
+                h3{
+                    font-family: $gotham-subtitle;
+                    font-size: $subtitle;
+                    margin: $small auto;
+                    color:$light-plate-1;
+                }
+
+                p{
+                    font-size: $small;
+                    font-family: $gotham-text;
+                    margin: $small $small;
+                }
+
+                &:hover{
+                    opacity: 1;
+                }
+
+
+            }
+
+
+
+
+        }
+
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//------------Experience-----------//
+//---------------------------------//
+.experience{
+    margin-top:$super-big;
+
+    .expecience-container-text{
+        @include flexboxbasic;
+    }
+
+        .box-btn-container-experience{
+            displaY:none;
+    }
+
+
+
+    .expecience-container-photos{
+
+        .experience-type{
+            width:90%;
+            position: relative;
+            margin: $small auto;
+
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .experence-photo{
+                width:100%;
+
+                &.opacity-container{
+                    opacity: 0.3;
+                }
+
+                h3{
+                    font-family: $gotham-subtitle;
+                    font-size: $subtitle;
+                    margin: $small auto;
+                    color:$light-plate-1;
+                }
+
+                img{
+                    margin: $small auto;
+                    width:80%; 
+                }
+
+                p{
+                    font-size: $small;
+                    font-family: $gotham-text;
+                    margin: $small $small;
+                }
+            }
+
+            .expierence-text{
+                position: absolute;
+                top:0;
+                left:0;
+                height: 100%;
+                opacity: 0;
+                text-align: center;
+
+                h3{
+                    font-family: $gotham-subtitle;
+                    font-size: $subtitle;
+                    margin: $small auto;
+                }
+
+                p{
+                    font-size: $small;
+                    font-family: $gotham-text;
+                    margin: $small $small;
+                }
+
+                &:hover{
+                    opacity: 1;
+                }
+
+
+            }
+        }
+
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//------------Services-------------//
+//---------------------------------//
+
+.services{
+    margin-top:$super-big;
+
+    .services-box{
+        border-radius: 5px;
+        width: 90%;
+        text-align: center;
+        margin: $small-big auto;
+
+        h3{
+            font-size: $subtitle;
+            font-family: $gotham-subtitle;
+            margin: $small auto ;
+        }
+
+        .box-list-services{
+            @include flexboxcolumn;
+            text-align: left;
+
+            li{
+            font-size: $text;
+            font-family: $gotham-text;
+            margin: $small auto ;
+            }
+        }
+
+    }
+
+    
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//--------------Skill--------------//
+//---------------------------------//
+.skill{
+    margin-top: $super-big; 
+    margin-bottom: $super-big;
+
+    h2{
+        margin-top: $super-big; 
+        
+    }
+
+    .box-btn-skill{
+        display:none;
+    }
+
+    .box-up-skill{
+        display:none;
+    }
+
+    .skill-text{
+        @include flexboxbasic;
+        .bnt-radio-container{
+                margin: 2px auto;
+                padding-top: $small;
+                padding-bottom: $small;
+            }
+
+    }
+
+     .skill-photo-container{
+        @include flexboxbasic;
+        margin-top: $super-big;
+        text-align: center;
+
+        .boxskill{
+            @include shadowbox;
+            @include lineargradientbasic;
+            margin: $small auto;
+            @include flexboxbasic;
+            flex-wrap: wrap;
+            width:90%;
+            min-height:650px;
+        }
+
+
+//---------------------------------//
+//-----------Front End-------------//
+        .frontend{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:45%;
+                padding:1%;
+                max-height:200px;
+                min-height:180px;
+
+                .h3-skill-container{
+                    @include flexboxbasic;
+                    width:100%;
+                    height:96px;
+                }
+
+                .h3-skill-container{
+                    @include flexboxbasic;
+                    width:100%;
+                    margin-bottom:0;
+                }
+
+
+                .bar-skill-html{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-css{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-js{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-responsive{
+                    height: $small;
+                    margin-bottom: $medium;
+                    margin-top: $medium;
+                    
+                }
+
+                .bar-skill-ui{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+
+                    .bar-skill-ux{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+            
+                img{
+                    width:50%;
+                    margin-top: $small;
+                    max-height:200px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+
+            }
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//-------------backend-------------//
+        .backend{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:45%;
+                padding:1%;
+                max-height:200px;
+                min-height:180px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:100px;
+                    width:100%;
+                }
+
+                .bar-skill-php{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-firebase{
+                    height: $small;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-sql{
+                    height: $small;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-nodejs{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-sqlserver{
+                    height: $notes;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $medium;
+                    max-height:200px;
+
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+        
+
+
+//---------------------------------//
+//----------technologies-----------//
+        .technologies{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:45%;
+                padding:1%;
+                max-height:200px;
+                min-height:180px;
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:100px;
+                    width:100%;
+                }
+
+                .bar-skill-react{
+                    height: $small;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-angular{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-github{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+
+                .bar-skill-git{
+                    height: $small;
+                    margin-bottom: $medium;
+
+                    
+                }
+
+                .bar-skill-typescript{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+            
+                .bar-skill-jquery{
+                    height: $small;
+                    margin-bottom: $medium;
+                    
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:180px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+//---------------------------------//
+//--------css-preprocessors--------//
+        .css-preprocessors{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:55%;
+                padding:1%;
+                max-height:100px;
+
+            
+                .bar-skill-less{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-sass{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:100px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//---------------data--------------//
+        .data{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:45%;
+                padding:1%;
+                max-height:200px;
+    
+                .h3-skill-container{
+                    margin-bottom:0;
+                }
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:100px;
+                    width:100%;
+                }
+
+                .bar-skill-intelligence{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-cloud{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-bigdata{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+            
+                .bar-skill-iot{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-kpis{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:150px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//----------music-producer---------//
+        .music-producer{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:55%;
+                padding:1%;
+                max-height:200px;
+
+                .bar-skill-cakewalk{
+                    height: $small;
+                    margin-bottom: $medium;  
+                }
+
+                .bar-skill-cubase{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                img{
+                    width:50%;
+                    margin-top: $big-small;
+                    max-height:160px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//----------Adobe---------//
+        .otros{
+
+            &.hide{
+                display:none;
+                opacity: 0;
+            }
+
+            .photo-skill-container{
+                @include flexboxcolumn;
+                width:42%;
+                padding:1%;
+                max-height:200px;
+                min-height:190px;
+
+                .h3-skill-container{
+                    margin-bottom:0;
+                }
+
+                .container-skill-img{
+                    @include flexboxbasic;
+                    min-height:100px;
+                    width:100%;
+                }
+
+
+                .bar-skill-illustrator{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-audition{
+                    height: $small;
+                    margin-bottom: $medium;               
+                }
+
+                .bar-skill-photoshop{
+                    height: $small;
+                    margin-bottom: $medium;
+                }
+
+                .bar-skill-premier{
+                    height: $small;
+                    margin-bottom: $medium; 
+                }
+
+                .bar-skill-xd{
+                    height: $small;
+                    margin-bottom: $medium;                  
+                }
+
+
+                img{
+                    width:45%;
+                    margin-top: $big-small;
+                    max-height:120px;
+                    }
+
+                h3{
+                    @include skillsubtitle($lettersize:$small-medium, $margintop:$small);
+                }
+            }
+        
+        }
+//---------------------------------//
+//---------------------------------//
+
+
+
+    }
+
+}
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+
+
+//---------------------------------//
+//-----------Portafolio------------//
+//---------------------------------//
+.portfolio{
+    margin-top: $super-big;
+
+    .box-img-portafolio{
+        a{
+        width:90%; 
+        margin: $big-small auto;
+        padding:1%;
+
+            img{
+            width:90%;
+            margin: $big-small auto;
+
+            }
+        }
+    }
+}
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+//---------------------------------//
+//-------------Contact-------------//
+//---------------------------------//
+.contact{
+    @include flexboxbasic;
+    margin: $super-big auto;
+
+    .contact-container{
+        @include flexboxbasic;
+            width: 90%;
+            background-image: url('/assets/img/ejecutivo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+
+
+            .contact-container-form{
+            @include flexboxcolumn;
+            width: 100%;
+            background-color: rgba( $darnnes, 0.8);
+            border-radius: 5px;
+
+                form{
+                    @include flexboxcolumn;
+                    width: 100%;
+                    text-align: center;
+
+                    .msg-container{
+                        h3{
+                        margin:$notes auto;
+                        }
+                    }
+
+                    .option-container{
+                        @include flexboxcolumn;
+                        width: 100% ;
+                        margin: $small auto;
+                        
+                        h3{
+                        margin-top: $small;
+                        }
+
+                        .option-type{
+                            div{
+                                margin:$notes auto;
+                            }
+                        }
+                        
+                    }
+
+                    input{
+                        width:60%;
+                    }
+
+                    label, select, textarea, h3{
+                        font-family: $gotham-form;
+                        color:$light-golden;
+                        font-size: $text-big;
+                        margin:auto;
+                    }
+
+                    input, select, textarea{
+                        border:none;
+                        background-color: transparent;
+                        font-family: $gotham-form;
+                        font-size: $text-big;
+                        color:$light-golden;
+                        border-bottom: 1px $dark-golden solid;
+                    }
+
+                    textarea{
+                        border: 1px $dark-golden solid;
+                        height:200px;
+                        width:100%;
+                        margin: $small auto;
+                        border-radius: 5px;
+                    }
+
+                    option{
+                        border:none;
+                        background-color: rgba( $darnnes, 0.8);
+                        font-family: $gotham-form;
+                        font-size: $text-big;
+                        color:$light-golden;
+                        border-radius: 5px;
+                    }
+
+                    input[type=radio]{
+                    appearance: none;
+                    @include transitionbasicslow;
+                    cursor:pointer;
+                    }
+
+
+                    [type=radio] {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        border: solid 2px $primary-golden;;
+                        margin-right: 8px;
+                        position: relative;
+                        background-color:transparent;
+                        }
+
+
+                    [type=radio]:checked::before{
+
+                        content: "";
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: $primary-golden;
+                        box-shadow: 0 0 2px  $primary-golden,
+                                    0 0 7px  $primary-golden,
+                                    0 0 12px  $primary-golden,
+                                    0 0 17px  $primary-golden,
+                                    0 0 22px  $primary-golden ; 
+                        position: absolute;
+                        top: 30%;
+                        left: 30%;
+                    }
+                }
+
+            }
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+//---------------------------------//
+//--------------Footer-------------//
+//---------------------------------//
+.footer{
+    p{
+        font-size: $text-big;
+        margin:$big-small auto;
+    }
+
+    i{
+        margin: $small 2%;
+        font-size: $text-big;
+    }
+}
+
+//---------------------------------//
+//---------------------------------//
+//---------------------------------//
+
+
+
+}
