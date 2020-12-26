@@ -923,7 +923,7 @@ h1{
                     @include skillbar($color:$secondary-blue);
 
                     .php-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#2e568e, $porcent:20%);
                         
                     }
                     
@@ -932,10 +932,10 @@ h1{
                 .bar-skill-firebase{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#f5820b);
 
                     .firebase-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#ffcb2c, $porcent:25%);
                         
                     }
                     
@@ -944,10 +944,10 @@ h1{
                 .bar-skill-sql{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#00618a);
 
                     .sql-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#00618a, $porcent:30%);
                         
                     }
                     
@@ -956,10 +956,10 @@ h1{
                 .bar-skill-nodejs{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#ffffff);
 
                     .nodejs-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#7dbe42, $porcent:15%);
                         
                     }
                     
@@ -968,10 +968,10 @@ h1{
                 .bar-skill-sqlserver{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#eff0f1);
 
                     .sqlserver-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#a91f23, $porcent:25%);
                         
                     }
                     
@@ -1020,10 +1020,10 @@ h1{
                 .bar-skill-react{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#ffffff);
 
                     .react-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#67daf9, $porcent:10%);
                         
                     }
                     
@@ -1032,10 +1032,10 @@ h1{
                 .bar-skill-angular{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#c3002f);
 
                     .angular-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#dd0049, $porcent:40%);
                         
                     }
                     
@@ -1044,10 +1044,10 @@ h1{
                 .bar-skill-github{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#3d3d3d);
 
                     .github-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#ffffff, $porcent:25%);
                         
                     }
                     
@@ -1056,10 +1056,10 @@ h1{
                 .bar-skill-git{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#f05133);
 
                     .git-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#f05133, $porcent:25%);
                         
                     }
                     
@@ -1068,10 +1068,10 @@ h1{
                 .bar-skill-typescript{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#007acc);
 
                     .typescript-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#007acc, $porcent:70%);
                         
                     }
                     
@@ -1080,10 +1080,10 @@ h1{
                 .bar-skill-jquery{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#172c45);
 
                     .jquery-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#172c45, $porcent:80%);
                         
                     }
                     
@@ -1126,10 +1126,10 @@ h1{
                 .bar-skill-less{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#2a4f84);
 
                     .less-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#1a3356, $porcent:80%);
                         
                     }
                     
@@ -1139,10 +1139,10 @@ h1{
                 .bar-skill-sass{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#cea8bb);
 
                     .sass-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#cc6699, $porcent:90%);
                         
                     }
                     
@@ -1199,10 +1199,10 @@ h1{
                 .bar-skill-intelligence{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#999999);
 
                     .intelligence-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#999999, $porcent:60%);
                         
                     }
                     
@@ -1212,10 +1212,10 @@ h1{
                 .bar-skill-cloud{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#6acad8);
 
                     .cloud-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#6acad8, $porcent:40%);
                         
                     }
                     
@@ -1224,12 +1224,12 @@ h1{
                 .bar-skill-bigdata{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#2093fe);
 
 
 
                     .bigdata-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#2093fe, $porcent:50%);
                         
                     }
                     
@@ -1251,10 +1251,10 @@ h1{
                 .bar-skill-kpis{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#293c67);
 
                     .kpis-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#293c67, $porcent:70%);
                         
                     }
                     
@@ -1295,10 +1295,10 @@ h1{
                 .bar-skill-cakewalk{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#fc3505);
 
                     .cakewalk-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#fc3507, $porcent:80%);
                         
                     }
                     
@@ -1307,10 +1307,10 @@ h1{
                 .bar-skill-cubase{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#7b0b18);
 
                     .cubase-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#801421, $porcent:70%);
                         
                     }
                     
@@ -1363,10 +1363,10 @@ h1{
                 .bar-skill-illustrator{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#e2b296);
 
                     .illustrator-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#ff7719, $porcent:30%);
                         
                     }
                     
@@ -1375,10 +1375,10 @@ h1{
                 .bar-skill-audition{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#9fdbd2);
 
                     .audition-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#00d8b0, $porcent:80%);
                         
                     }
                     
@@ -1387,10 +1387,10 @@ h1{
                 .bar-skill-photoshop{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#c1b7ff);
 
                     .photoshop-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#3bc4fb, $porcent:25%);
                         
                     }
                     
@@ -1399,10 +1399,10 @@ h1{
                 .bar-skill-premier{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#da7bff);
 
                     .premier-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#b34df7, $porcent:30%);
                         
                     }
                     
@@ -1411,12 +1411,12 @@ h1{
                 .bar-skill-xd{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:$secondary-blue);
+                    @include skillbar($color:#f5bbe2);
 
 
 
                     .xd-bar{
-                        @include skillbarcontent($color:$secondary-blue, $porcent:40%);
+                        @include skillbarcontent($color:#fe31c0, $porcent:50%);
                         
                     }
                     
