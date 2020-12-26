@@ -1020,7 +1020,7 @@ h1{
                 .bar-skill-react{
                     height: $small;
                     margin-bottom: $medium;
-                    @include skillbar($color:#ffffff);
+                    @include skillbar($color:#67daf9);
 
                     .react-bar{
                         @include skillbarcontent($color:#67daf9, $porcent:10%);
