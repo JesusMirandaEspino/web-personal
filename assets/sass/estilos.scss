@@ -135,9 +135,16 @@ h1{
         @include flexboxbasic;
         height: $super-big;
         @include lineargradienmenu;
+
+        img{
+            max-height:40px;
+            margin:auto;
+        }
+
         i{
             color:$black;
-            font-size:$small;
+            font-size:$small-medium;
+            margin:auto;
             cursor: pointer;
             @include transitionbasic;
 
@@ -298,6 +305,11 @@ h1{
     .personal-logo{
         @include flexboxbasic;
         height: $super-big;
+
+        img{
+            height:50px;
+            margin:auto;
+        }
     }
 //---------------------------------//
 
@@ -1730,6 +1742,11 @@ h1{
         @include lineargradienservicesmenu;
         width:100%;
 
+        img{
+            max-height:30px;
+            margin:auto;
+        }
+
         .box-icon{
             display: flex;
             justify-content: flex-end;
@@ -1750,6 +1767,9 @@ h1{
         }
 
         .box-logo{
+
+
+
             i{
                 font-size: $subtitle;
                 color:$primary-golden;
@@ -2960,10 +2980,10 @@ h1{
         }
 
         .box-logo{
-            i{
-                font-size: $subtitle;
-                color:$primary-golden;
-            }
+        img{
+            max-height:30px;
+            margin:auto;
+        }
         }
     }
 
@@ -4142,10 +4162,10 @@ h1{
         }
 
         .box-logo{
-            i{
-                font-size: $subtitle;
-                color:$primary-golden;
-            }
+        img{
+            max-height:40px;
+            margin:auto;
+        }
         }
     }
 
@@ -5320,9 +5340,9 @@ h1{
         }
 
         .box-logo{
-            i{
-                font-size: $subtitle;
-                color:$primary-golden;
+            img{
+                max-height:40px;
+                margin:auto;
             }
         }
     }

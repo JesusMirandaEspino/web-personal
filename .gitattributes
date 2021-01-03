@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+static/* linguist-vendored
+# Enable syntax highlighting for files with `.gitattributes` extensions.
+#
+*.gitattributes linguist-language=gitattributes
