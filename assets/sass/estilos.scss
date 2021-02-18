@@ -935,7 +935,7 @@ h1{
                     @include skillbar($color:$secondary-blue);
 
                     .php-bar{
-                        @include skillbarcontent($color:#2e568e, $porcent:20%);
+                        @include skillbarcontent($color:#2e568e, $porcent:40%);
                         
                     }
                     
@@ -947,7 +947,7 @@ h1{
                     @include skillbar($color:#f5820b);
 
                     .firebase-bar{
-                        @include skillbarcontent($color:#ffcb2c, $porcent:25%);
+                        @include skillbarcontent($color:#ffcb2c, $porcent:50%);
                         
                     }
                     
@@ -959,7 +959,7 @@ h1{
                     @include skillbar($color:#00618a);
 
                     .sql-bar{
-                        @include skillbarcontent($color:#00618a, $porcent:30%);
+                        @include skillbarcontent($color:#00618a, $porcent:40%);
                         
                     }
                     
@@ -1047,7 +1047,7 @@ h1{
                     @include skillbar($color:#c3002f);
 
                     .angular-bar{
-                        @include skillbarcontent($color:#dd0049, $porcent:40%);
+                        @include skillbarcontent($color:#dd0049, $porcent:60%);
                         
                     }
                     
