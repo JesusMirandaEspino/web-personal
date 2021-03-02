@@ -1,0 +1,170 @@
+@import "_colors.scss";
+
+
+//---------------------------------//
+//----------flex box basic---------//
+@mixin  flexboxbasic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+//---------------------------------//
+//----------flex box column---------//
+@mixin  flexboxcolumn {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+//---------------------------------//
+//------transition  3 seconds------//
+@mixin transitionbasic {
+    transition: all 0.3s ease;
+}
+
+@mixin transitionbasicslow {
+    transition: all 0.5s ease;
+}
+
+//---------------------------------//
+//------shadows standar box--------//
+@mixin shadowbox{
+    box-shadow: 0px 0px 6px 0px $dark-golden ;
+}
+
+
+//---------------------------------//
+//------shadows standar box--------//
+@mixin shadowboximg{
+    box-shadow: 0px 0px 6px 0px $dark-golden ;
+    box-shadow: 0px 0px 8px 0px $dark-golden ;
+    box-shadow: 0px 0px 12px 0px $dark-golden ;
+    box-shadow: 0px 0px 18px 0px $dark-golden ;
+    box-shadow: 0px 0px 24px 0px $dark-golden ;
+}
+
+//---------------------------------//
+//----linear gradient standard-----//
+@mixin lineargradientbasic
+{
+    background: linear-gradient(145deg, rgba(#1F1F1F, 0.1) 0%, rgba(#636363,0.10) 100%);
+
+}
+
+@mixin lineargradienservices
+{
+    background: linear-gradient(145deg, rgba(#1F1F1F, 0.3) 0%, rgba(#636363,0.3) 100%);
+
+}
+
+
+@mixin lineargradienservicesmenu
+{
+    background: linear-gradient(145deg, rgba(#1F1F1F, 0.9) 0%, rgba($primary-plate,0.9) 100%);
+
+}
+
+@mixin  lineargradienmenu
+{
+background: linear-gradient(145deg, rgba($dark-golden,1) 0%, rgba($primary-golden,1) 100%);    
+}
+
+//---------------------------------//
+//---------Skill bar box----------//
+@mixin skillbar($color) {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width:90%;
+    margin-top: $small;
+    border: solid 1px $color;
+    border-radius: 5px;
+}
+
+//---------------------------------//
+//---------Skill bar content----------//
+@mixin skillbarcontent($color, $porcent){
+    height: 100%;
+    width: $porcent;
+    background-color: $color;
+    border-radius: 5px;
+}
+
+
+
+//---------------------------------//
+//---------Skill subtitle----------//
+@mixin skillsubtitle($lettersize, $margintop) {
+    font-family: $gotham-subtitle;
+    font-size: $lettersize;
+    color:$third-golden;
+    margin-top: $margintop;
+}
+
+//---------------------------------//
+//-------Shadow shine normal-------//
+@mixin shadowsshine{
+    box-shadow: 0 0 2px  $primary-golden,
+                0 0 7px  $primary-golden,
+                0 0 12px  $primary-golden,
+                0 0 17px  $primary-golden,
+                0 0 22px  $primary-golden ; 
+}
+
+//---------------------------------//
+//-------Shadow shine button-------//
+@mixin shadowsshinebutton{
+    box-shadow: 0 0 2px  $primary-golden,
+                0 0 6px  $primary-golden,
+                inset 1px 1px 2px $dark-plate,
+                inset 1px 1px 4px $dark-plate,
+                inset 1px 1px 6px $dark-plate,
+                inset 1px 1px 8px $dark-plate; 
+}
+
+//---------------------------------//
+//-----------Button style----------//
+@mixin  buttonbasic {
+    button{
+        background-color:$primary-plate;
+        color:$third-golden;
+        padding: 6px 6px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        border: 1px $light-golden solid;
+        border-radius: 6px;
+        margin: 6px auto;
+        box-shadow: inset 1px 1px 2px $secondary-plate,
+                    inset 1px 1px 4px $secondary-plate,
+                    inset 1px 1px 6px $secondary-plate,
+                    inset 1px 1px 8px $secondary-plate;
+        @include transitionbasicslow;
+        
+
+        &:hover{
+            @include shadowsshinebutton;
+        }
+
+        &.active{
+            background-color:$darnnes;
+            color:$primary-golden;
+            box-shadow: 0 0 2px  $primary-golden,
+                        0 0 6px  $primary-golden,
+                        0 0 8px  $primary-golden,
+                        inset 1px 1px 4px $dark-plate,
+                        inset 1px 1px 6px $dark-plate,
+                        inset 1px 1px 8px $dark-plate,
+                        inset 1px 1px 10px $dark-plate,
+                        inset 1px 1px 12px $dark-plate;
+        }
+
+    }
+}
