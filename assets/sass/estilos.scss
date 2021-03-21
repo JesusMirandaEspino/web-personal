@@ -952,7 +952,7 @@ h1{
                     @include skillbar($color:$secondary-blue);
 
                     .php-bar{
-                        @include skillbarcontent($color:#2e568e, $porcent:40%);
+                        @include skillbarcontent($color:#2e568e, $porcent:50%);
                         
                     }
                     
@@ -988,7 +988,7 @@ h1{
                     @include skillbar($color:#ffffff);
 
                     .nodejs-bar{
-                        @include skillbarcontent($color:#7dbe42, $porcent:15%);
+                        @include skillbarcontent($color:#7dbe42, $porcent:50%);
                         
                     }
                     
@@ -1064,7 +1064,7 @@ h1{
                     @include skillbar($color:#c3002f);
 
                     .angular-bar{
-                        @include skillbarcontent($color:#dd0049, $porcent:60%);
+                        @include skillbarcontent($color:#dd0049, $porcent:70%);
                         
                     }
                     
@@ -1076,7 +1076,7 @@ h1{
                     @include skillbar($color:#3d3d3d);
 
                     .github-bar{
-                        @include skillbarcontent($color:#ffffff, $porcent:25%);
+                        @include skillbarcontent($color:#ffffff, $porcent:80%);
                         
                     }
                     
@@ -1088,7 +1088,7 @@ h1{
                     @include skillbar($color:#f05133);
 
                     .git-bar{
-                        @include skillbarcontent($color:#f05133, $porcent:25%);
+                        @include skillbarcontent($color:#f05133, $porcent:70%);
                         
                     }
                     
