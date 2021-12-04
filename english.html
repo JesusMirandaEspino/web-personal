@@ -1155,12 +1155,12 @@
 
                             <div class="option-container">
                                 <label class="label-send" for="">Name</label>
-                                <input  class="input-send"  type="text" name="Nombre" id="name" required>
+                                <input  class="input-send"  name="name" type="text" id="name" required>
                             </div>
 
                             <div class="option-container">
                                 <label class="label-send"  for="">Email</label>
-                                <input class="input-send" type="text" name="Correo" id="email"   required>
+                                <input class="input-send" type="text"  id="email" name="email"  required>
                             </div>
 
                             <div class="option-container">
@@ -1169,13 +1169,13 @@
                                 <div  class="option-type" >
 
                                     <div>
-                                        <input class="type-contact"   type="radio" name="category" id="rh"  checked >
+                                        <input class="type-contact"   type="radio" id="rh" name="category" checked >
                                         <label for="">Human Resources & Recruiter</label>
                                     </div>
 
 
                                     <div>
-                                        <input class="type-contact"   type="radio" name="category" id="client">
+                                        <input class="type-contact"   type="radio"   name="category" id="client">
                                         <label for="">Client looking for services</label>
                                     </div>
                                         
@@ -1185,7 +1185,7 @@
                             </div>
 
                             <div class="contac-service type-service" > 
-                                <select name="servicio" id="servicio-client">
+                                <select name="servicio" id="servicio-client" name="roles[]"  >
                                     <option value="frontend">Frontend</option>
                                     <option value="backend">Backend</option>
                                     <option value="musica">Music Production</option>
@@ -1194,7 +1194,7 @@
                             </div>
 
                             <div class="contac-recruit type-service hide">
-                                <select name="servicio" id="servicio-rh">
+                                <select name="servicio" id="servicio-rh" name="types[]"  >
                                     <option value="frontend">Web Development</option>
                                     <option value="backend">Logistica & Almacen</option>
                                     <option value="musica">Credit Executive</option>
@@ -1205,7 +1205,7 @@
 
                             <div  class="msg-container">
                                 <h3>Leave me a Messagee</h3>
-                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <textarea id="" cols="30" rows="10" name="message" ></textarea>
                             </div>
 
 

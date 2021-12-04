@@ -1156,12 +1156,12 @@
 
                             <div class="option-container">
                                 <label class="label-send" for="">Nombre</label>
-                                <input  class="input-send"  type="text" name="Nombre" id="name" required>
+                                <input  class="input-send"  type="text" name="name" id="name" required>
                             </div>
 
                             <div class="option-container">
                                 <label class="label-send"  for="">Correo</label>
-                                <input class="input-send" type="text" name="Correo" id="email"   required>
+                                <input class="input-send" type="text" name="email" id="email"   required>
                             </div>
 
                             <div class="option-container">
@@ -1186,7 +1186,7 @@
                             </div>
 
                             <div class="contac-service type-service" > 
-                                <select name="servicio" id="servicio-client">
+                                <select name="servicio" id="servicio-client"  name="roles[]">
                                     <option value="frontend">Frontend</option>
                                     <option value="backend">Backend</option>
                                     <option value="musica">Produccion Musical</option>
@@ -1194,7 +1194,7 @@
                                 </select>
                             </div>
 
-                            <div class="contac-recruit type-service hide">
+                            <div class="contac-recruit type-service hide" name="types[]">
                                 <select name="servicio" id="servicio-rh">
                                     <option value="frontend">Desarrollo Web</option>
                                     <option value="backend">Logistica & Almacen</option>
@@ -1206,7 +1206,7 @@
 
                             <div  class="msg-container">
                                 <h3>Dejame un Mensaje</h3>
-                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <textarea name="" id="" cols="30" rows="10" name="message"  ></textarea>
                             </div>
 
 
