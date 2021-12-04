@@ -9,7 +9,7 @@
 ///<reference path="./_app/lightboxselect.ts"/>
 ///<reference path="./_app/formulario.ts"/>
 ///<reference path="./_app/filedownload.ts"/>
-
+///<reference path="./_app/filedownloadEn.ts"/>
 
 
 const btnmenufixed: HTMLElement | null = document.getElementById( 'btnmenufixed' ) as HTMLElement;

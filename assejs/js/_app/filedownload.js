@@ -1,4 +1,4 @@
-var btnCv = document.getElementById('btncv');
+var btnCvEs = document.getElementById('btncv');
 var dataUrl = 'assets/documents/Jose de Jesus Miranda Espino.pdf';
 var filename = 'Jose de Jesus Miranda Espino';
 function downloadDataUrlFromJavascript() {
@@ -14,6 +14,7 @@ function downloadDataUrlFromJavascript() {
     document.body.removeChild(link);
     // Cleanupdelete link;
 }
-btnCv.addEventListener('click', function () {
+btnCvEs === null || btnCvEs === void 0 ? void 0 : btnCvEs.addEventListener('click', function () {
+    console.log('hola');
     downloadDataUrlFromJavascript();
 });

@@ -279,7 +279,7 @@ btnSubmit === null || btnSubmit === void 0 ? void 0 : btnSubmit.addEventListener
         }
     }
 });
-var btnCv = document.getElementById('btncv');
+var btnCvEs = document.getElementById('btncv');
 var dataUrl = 'assets/documents/Jose de Jesus Miranda Espino.pdf';
 var filename = 'Jose de Jesus Miranda Espino';
 function downloadDataUrlFromJavascript() {
@@ -291,8 +291,24 @@ function downloadDataUrlFromJavascript() {
     link.click();
     document.body.removeChild(link);
 }
-btnCv.addEventListener('click', function () {
+btnCvEs === null || btnCvEs === void 0 ? void 0 : btnCvEs.addEventListener('click', function () {
+    console.log('hola');
     downloadDataUrlFromJavascript();
+});
+var btnCvEn = document.getElementById('btncvEn');
+var dataUrlEn = 'assets/documents/Jose de Jesus Miranda Espino..pdf';
+var filenameEn = 'Jose de Jesus Miranda Espino';
+function downloadDataUrlFromJavascriptEn() {
+    var linkEn = document.createElement("a");
+    linkEn.download = filenameEn;
+    linkEn.target = "_blank";
+    linkEn.href = dataUrlEn;
+    document.body.appendChild(linkEn);
+    linkEn.click();
+    document.body.removeChild(linkEn);
+}
+btnCvEn === null || btnCvEn === void 0 ? void 0 : btnCvEn.addEventListener('click', function () {
+    downloadDataUrlFromJavascriptEn();
 });
 var btnmenufixed = document.getElementById('btnmenufixed');
 var btnmenumovil = document.getElementById('btnmenumovil');
